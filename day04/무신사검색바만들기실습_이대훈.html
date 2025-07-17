@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            margin: auto;
+            width: 300px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 30px;
+            position: relative;
+            background-color: black;
+        }
+
+        .word {
+            width: 200px;
+            height: 40px;
+            position: absolute;
+            justify-content: space-between;
+            left: 12px;
+            top: 8px;
+            outline: none;
+            border: none;
+            text-align: left;
+            background-color: black;
+            border-radius: 20px;
+            color: white;
+
+        }
+
+        .icon {
+            border-radius: 10px;
+            position: absolute;
+            display: flex;
+            width: 50px;
+            height: 50px;
+            background-image: url(https://play-lh.googleusercontent.com/CwD2Qo3GIyLgzufOHf8-YCpWMqvNZfQkmdwJYRDT79BQz0gHJfyfZTeUw7wlTWZlRhk);
+            background-position: center;
+            background-size: cover;
+            right: 20px;
+            bottom: 5px;
+
+        }
+
+
+
+
+        .btn{
+            width: 300px;
+            height: 60px;
+            block-size: 10px;
+            margin: 0 auto;
+        }
+
+        .word::placeholder{
+            color: white;
+        }
+        
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <span class="icon"> 11</span>
+
+        <input type="search"  placeholder=" 검색 "  class="word">
+
+
+    </div>
+
+
+
+    
+
+
+</body>
+
+</html>
