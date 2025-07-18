@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-wrap {
+            padding: 10px;
+            height: 600px;
+
+        }
+
+        .sub1 {
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            position: relative;
+            outline: none;
+
+
+
+        }
+
+        .sub1-logo {
+            width: 200xp;
+            position: absolute;
+            left: 50px;
+        }
+
+
+        .sub1-text {
+            height: 50px;
+            border-radius: 20px;
+            position: absolute;
+            right: 80px;
+            top: 20px;
+            border-color: gray;
+
+
+
+        }
+
+
+        .sub1-search {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            border-radius: 80px;
+
+        }
+
+        .sub2 {
+            display: flex;
+
+            line-height: 100px;
+            background-color: skyblue;
+
+
+
+        }
+
+        .sub2-info {
+            font-size: 24px;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+
+
+        }
+
+        .sub2-info2 {
+            font-size: 24px;
+            width: 200px;
+            height: 100px;
+
+
+
+
+        }
+
+        .sub2-info3 {
+
+            font-size: 24px;
+            width: 100px;
+            height: 100px;
+
+
+        }
+
+        .id1 {
+
+
+            height: 500px;
+        }
+
+        table {
+
+            border: 1px solid black;
+            width: 100%;
+            height: 100px;
+        }
+
+        td, tr,th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-wrap">
+
+        <div class="sub1">
+            <img class="sub1-logo" src="./logo.png" alt="에이콘로고">
+            <input type="search" class="sub1-text">
+            <img class="sub1-search" src="./검색.png" alt="검색로고">
+        </div>
+
+        <ul class="sub2">
+            <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com /
+             " class="sub2-info"> 로그인 </a>
+
+
+
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%25E3%2584%25B4%25E3%2584%25B4%26oq%3D%25E3%2584%25B4%25E3%2584%25B4%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOTITCAEQLhiDARjHARixAxjRAxiABDINCAIQABiDARixAxiABDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDINCAcQABiDARixAxiABDINCAgQABiDARixAxiABNIBCDgwM2owajE1qAIIsAIB%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=ko&ifkv=AdBytiOe_JDHuVmc-9IHc0lbDENHagANrslJh9foYJIRMCMKl90Y1sVq8nAlctpQbJrSibHIjF-kcA&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S959829991%3A1752817120570375"
+                class="sub2-info2">
+                회원가입</a>
+
+
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2Fsearch%3Fq%3D%25E3%2584%25B4%25E3%2584%25B4%26oq%3D%25E3%2584%25B4%25E3%2584%25B4%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOTITCAEQLhiDARjHARixAxjRAxiABDINCAIQABiDARixAxiABDINCAMQABiDARixAxiABDINCAQQABiDARixAxiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDINCAcQABiDARixAxiABDINCAgQABiDARixAxiABNIBCDgwM2owajE1qAIIsAIB%26sourceid%3Dchrome%26ie%3DUTF-8&ec=GAZAAQ&hl=ko&ifkv=AdBytiOe_JDHuVmc-9IHc0lbDENHagANrslJh9foYJIRMCMKl90Y1sVq8nAlctpQbJrSibHIjF-kcA&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S959829991%3A1752817120570375"
+                class="sub2-info3">
+                홈으로</a>
+        </ul>
+
+        <div class="id1">
+
+            <table>
+                <caption> 회원가입 </caption>
+
+
+                <tbody>
+                    <tr>
+                        <td>이름</td>
+                        <td>아이디</td>
+                        <button>중복확인</button>
+                        <td>비밀번호</td>
+                        <td><input type="text"></td>
+                        <td>이메일
+                        <td><input type="text"></td> @
+                        <td><input type="text"></td>
+                        <input type="checkbox">
+                        <button>중복확인</button>
+                        </td>
+                        <td>학년/반
+                            <input type="checkbox" name="" id="">학년
+
+                            <input type="text"> 반
+                        </td>
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

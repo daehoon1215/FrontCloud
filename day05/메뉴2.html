@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .menu {
+
+
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .menu-item {
+
+            line-height: 40px;
+            text-align: center;
+            width: 200px;
+            height: 40px;
+            border: 1px solid black;
+/*히든메뉴 부모정하기*/
+            position: relative;
+        }
+
+        .hidden-menu {
+           
+            background-color: #ccc;
+            width: 100%;
+            border: 1pxs solid black;
+            font-size: 12px;
+            display: none;
+
+            position: absolute;
+            top: 40px;
+            left: 0;
+        }
+
+        .menu-item:hover.hidden-menu {
+            display: block;
+        }
+
+        .b1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+ <div class="b1">
+    <ul class="menu">
+        <!--상위메뉴-->
+        <li class="menu-item">빵</li>
+
+        <!--하위메뉴-->
+        <ul class="hidden-menu">
+            <li>빵 하위메뉴1</li>
+            <li>빵 하위메뉴2</li>
+            <li>빵 하위메뉴3</li>
+            <li>빵 하위메뉴4</li>
+
+        </ul>
+
+
+        <li class="menu-item">과일</li>
+
+        <ul class="hidden-menu">
+            <li>과일 하위메뉴1</li>
+            <li>과일 하위메뉴2</li>
+            <li>과일 하위메뉴3</li>
+            <li>과일 하위메뉴4</li>
+
+        </ul>
+
+
+        <li class="menu-item">생선</li>
+
+        <ul class="hidden-menu">
+            <li>생선 하위메뉴1</li>
+            <li>생선 하위메뉴2</li>
+            <li>생선 하위메뉴3</li>
+            <li>생선 하위메뉴4</li>
+
+        </ul>
+
+        <li class="menu-item">고기</li>
+
+        <ul class="hidden-menu">
+            <li>빵 하위메뉴1</li>
+            <li>빵 하위메뉴2</li>
+            <li>빵 하위메뉴3</li>
+            <li>빵 하위메뉴4</li>
+
+        </ul>
+
+    </ul>
+    </div>
+</body>
+
+</html>
