@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let name = prompt("이름입력");
+
+
+        let kor =Number (prompt("국어점수"));
+
+        let eng =Number (prompt("영어점수"));
+
+        let math =Number (prompt("수학점수"));
+
+        let allpoint = kor + eng + math;
+       
+        let avg = (allpoint/3).toFixed(0);
+
+        alert(name+"총점은"+ allpoint+"이고"+"평균은"+avg+"이다");
+
+
+
+    </script>
+</body>
+
+</html>

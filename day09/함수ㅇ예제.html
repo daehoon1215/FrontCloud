@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+
+        function adder(a, b) {
+            let sum;
+            sum = a + b;
+
+            return sum;
+        }
+
+        let result = adder(2, 3);
+
+        alert(result);
+
+        alert(adder(2, 3));
+
+        //위치정보를 반환하는 함수
+        //입력:0
+        //출력:위도,경도
+
+        function 위치가져오기() {
+            //
+            let 위도 = 134.322;
+            let 경도 = 12554.22;
+
+            //배열, 객체
+            let 위치 = { 위도: 경도, 경도: 12554.22 }
+            return 위치;
+        }
+
+        let result위치 = 위치가져오기();
+        console.log(result위치);
+
+
+
+
+
+
+        //객체 맛보기
+        let snackName = "맛동산";
+        let snack = {
+            name: "맛동산",
+            price: 2800,
+            weight: "100g",
+            maker: "헤테"
+        };
+
+        console.log(snack.name);
+        console.log(snack.price);
+
+        console.log(snack.weight);
+
+
+
+        //로또번호 제공
+
+        //입력 x
+        //반환: 로또번호 6개
+
+        function 로또번호가져오기() {
+            let a = 7, b = 44, c = 23, d = 21, e = 7, f = 51;
+            let lotto = new Array(6);
+            lotto[0] = a;
+            lotto[1] = b;
+            lotto[2] = c;
+            lotto[3] = e;
+            lotto[4] = f;
+            return lotto
+        }
+
+        let result1 = 로또번호가져오기();
+
+
+
+
+
+        function funB(cnt) {
+            for (i = 1; i <= cnt; i++) {
+                alert("hi");
+            }
+        }
+
+        funB();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .m1 {
+            position: relative;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .head {
+            line-height: 60px;
+            position: relative;
+            border: #737881;
+            height: 60px;
+            display: flex;
+
+
+
+        }
+
+
+        .logo1 {
+            position: absolute;
+            bottom: -20px;
+            left: 48%;
+
+
+        }
+
+        .headbug {
+            position: absolute;
+            padding-left: 15px;
+            top: 5px;
+
+        }
+
+        .headmenu {
+            position: absolute;
+            padding-left: 7px;
+            left: 30px;
+
+        }
+
+        .headinfo {
+            position: absolute;
+
+            right: 120px;
+        }
+
+        .headlogin {
+
+            position: absolute;
+            top: 15%;
+            right: 20px;
+            border-radius: 50px;
+            width: 90px;
+            height: 40px;
+            border: 1px solid black;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .banner0 {
+            position: absolute;
+
+            width: 100%;
+            display: flex;
+            height: 300px;
+
+        }
+
+        .banner1 {
+            background-position: center;
+            width: 50%;
+
+
+        }
+
+        .banner2 {
+            width: 50%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(https://www.youthdaily.co.kr/data/photos/20240311/art_17103844187705_b485f4.png);
+        }
+
+
+
+        .game1 {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            top: 150%;
+            text-align: left;
+        }
+
+        .game2 {
+            position: absolute;
+            font-size: 25px;
+            line-height: 30px;
+            left: 10%;
+
+        }
+
+
+
+
+        .newplayer {
+
+            position: absolute;
+            left: 10%;
+            top: 170%;
+            font-size: 18px;
+            color: aqua;
+            font-weight: 800;
+        }
+
+
+
+
+        .goodgameimg1 {
+
+            position: absolute;
+            top: 185%;
+            left: 10%;
+            width: 150px;
+            height: 190px;
+
+        }
+
+        .goodgameimg2 {
+
+            position: absolute;
+            position: absolute;
+            top: 185%;
+            left: 19%;
+            width: 150px;
+            height: 190px;
+
+        }
+
+        .goodgameimg3 {
+
+            position: absolute;
+            position: absolute;
+            top: 185%;
+            left: 28%;
+            width: 150px;
+            height: 190px;
+
+        }
+
+
+        .goodgameimg4 {
+
+            position: absolute;
+            position: absolute;
+            top: 185%;
+            left: 37%;
+            width: 150px;
+            height: 190px;
+
+        }
+
+        .call {
+            display: flex;
+            font-weight: 00;
+            font-size: 18px;
+            position: absolute;
+            position: absolute;
+            top: 170%;
+            right: 15%;
+            width: 20%;
+
+            text-align: center;
+            line-height: 18px;
+        }
+
+
+        .mlogin2 {
+            display: flex;
+            position: absolute;
+            top: 222%;
+            right: 15%;
+
+        }
+
+        .mlogin1 {
+
+            width: 300px;
+            display: flex;
+            position: absolute;
+            top: 200%;
+            right: 15%;
+        }
+
+
+
+        .ml2 {
+            color: white;
+            background-color: darkgray;
+            border: 1px solid white;
+            width: 150px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .ml1 {
+            color: white;
+            background-color: rgb(37, 36, 36);
+            border: 1px solid white;
+            width: 100%;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .mlogin3 {
+            position: absolute;
+            display: flex;
+            top: 250%;
+            right: 15%;
+            width: 20%;
+
+        }
+
+        .last1 {
+            box-sizing: border-box;
+            padding-left: 30px;
+            position: absolute;
+            display: flex;
+            font-size: 18px;
+            font-weight: 700px;
+            top: 1200%;
+            width: 100%;
+            left: 0;
+            color: white;
+            background-color: #222426;
+            align-items: normal;
+            line-height: 40px;
+            padding: 10px;
+
+        }
+
+        .sns1 {
+            position: absolute;
+            right: 50px;
+
+        }
+
+        .sns2 {
+            position: absolute;
+            right: 80px;
+        }
+
+        .sns3 {
+            position: absolute;
+            right: 110px;
+        }
+
+        .last2 {
+
+            left: 0;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 1230%;
+            background-color: #222426;
+            line-height: 10px;
+            font-size: 16px;
+
+        }
+
+        .last3 {
+
+            left: 0;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 1240%;
+            background-color: #222426;
+            line-height: 10px;
+            font-size: 16px;
+
+        }
+
+        .guide {
+
+            justify-content: center;
+            display: flex;
+            width: 80px;
+            font-size: 10px;
+        }
+
+        .COPYRIGHT1 {
+            color: white;
+            box-sizing: border-box;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            top: 1250%;
+            position: absolute;
+            background-color: #222426;
+            font-size: 10px;
+            padding-left: 10px;
+            line-height: 10px;
+        }
+
+        .COPYRIGHT2 {
+            color: white;
+            line-height: 10px;
+            box-sizing: border-box;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            top: 1260%;
+            position: absolute;
+            background-color: #222426;
+            font-size: 10px;
+            padding-left: 10px;
+        }
+
+        .COPYRIGHT3 {
+            color: white;
+            line-height: 10px;
+            box-sizing: border-box;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            top: 1270%;
+            position: absolute;
+            background-color: #222426;
+            font-size: 10px;
+            padding-left: 10px;
+        }
+
+        .lastlogo {
+
+            left: 0;
+            width: 100%;
+            background-color: #222426;
+            height: 30px;
+            top: 1280%;
+            position: absolute;
+        }
+
+        .content {
+            line-height: 60px;
+            display: flex;
+            padding: 20px;
+            position: absolute;
+            top: 300%;
+            width: 100%;
+            height: 200px;
+            font-size: 16px;
+            color: #737881;
+            border: 1px solid #737881;
+
+
+        }
+
+        .content-game0 {
+            position: absolute;
+            height: 50px;
+            right: 15%;
+            top: -30%;
+            font-size: 19px;
+            border: 1px solid white;
+
+        }
+
+        .content-game01 {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(https://cdn-icons-png.flaticon.com/512/71/71403.png);
+            position: absolute;
+            height: 40px;
+            right: 17%;
+            top: -30%;
+            width: 50px;
+            border: 1px solid white;
+            background-color: white;
+
+
+        }
+
+        .content-game1 {
+            position: absolute;
+
+            right: 85%;
+        }
+
+        .content-game2 {
+            position: absolute;
+
+            right: 75%;
+        }
+
+        .content-game3 {
+            position: absolute;
+
+            right: 65%;
+        }
+
+        .content-game4 {
+            position: absolute;
+
+            right: 55%;
+        }
+
+        .content-game5 {
+            position: absolute;
+
+            right: 45%;
+        }
+
+        .content-game6 {
+            position: absolute;
+            right: 35%;
+        }
+
+        .content-game7 {
+            position: absolute;
+            right: 25%;
+        }
+
+        .content-game8 {
+            position: absolute;
+            right: 15%;
+        }
+
+        .content-game9 {
+            position: absolute;
+            right: 85%;
+            top: 40%;
+        }
+
+        .content-game10 {
+            position: absolute;
+            right: 75%;
+            top: 40%;
+        }
+
+        .content-game11 {
+            position: absolute;
+            right: 65%;
+            top: 40%;
+        }
+
+        .content-game12 {
+            position: absolute;
+            right: 55%;
+            top: 40%;
+        }
+
+        .content-game13 {
+            position: absolute;
+            right: 45%;
+            top: 40%;
+        }
+
+        .content-game14 {
+            position: absolute;
+            right: 35%;
+            top: 40%;
+        }
+
+        .content-game15 {
+            position: absolute;
+            right: 25%;
+            top: 40%;
+        }
+
+        .content-game16 {
+            position: absolute;
+            right: 15%;
+            top: 40%;
+        }
+
+        .content-ui {
+            box-sizing: border-box;
+            position: absolute;
+
+            width: 50%;
+            height: 500px;
+            display: flex;
+            top: 400%;
+            padding-left: 10%;
+            gap: 200px;
+
+        }
+
+
+        .gamename {
+            color: #222426;
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            left: 240px;
+            font-weight: 550;
+
+
+        }
+
+        .gamename2 {
+
+            color: #222426;
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            left: 500px;
+            font-weight: 550;
+
+
+        }
+
+        .col3 {
+            margin-bottom: 30px;
+            background-image: url(https://rs.nxfs.nexon.com/gameusr/25/7/ktoB17100255786.jpg);
+            height: 40px;
+            width: 40px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+
+
+        }
+
+        .col31 {
+            margin-bottom: 30px;
+            background-image: url(https://rs.nxfs.nexon.com/gameusr/25/7/ktoB17100255786.jpg);
+            height: 40px;
+            width: 40px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+
+
+        }
+
+        .RPG {
+            top: -50px;
+            position: absolute;
+
+            width: 80px;
+            height: 50px;
+        }
+
+        .content-ui2 {
+            box-sizing: border-box;
+            position: absolute;
+            left: 40%;
+            width: 50%;
+            height: 500px;
+            display: flex;
+            top: 400%;
+            padding-left: 10%;
+            gap: 200px;
+
+        }
+
+        .ARPG {
+            top: -50px;
+            position: absolute;
+            width: 80px;
+            height: 50px;
+        }
+
+        .col4 {
+            margin-bottom: 30px;
+
+            background-image: url(https://rs.nxfs.nexon.com/gameusr/25/7/ktoB17100255786.jpg);
+            height: 40px;
+            width: 40px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+
+
+        }
+
+        .gamename4 {
+
+            color: #222426;
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            left: 240px;
+            font-weight: 550;
+
+
+        }
+
+         .gamename5 {
+
+            color: #222426;
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            left: 500px;
+            font-weight: 550;
+
+
+        }
+          .casual {
+           left: 125%;
+            top: -50px;
+            position: absolute;
+            width: 80px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+    <div class=" m1">
+        <header class="head">
+
+            <a class="headbug" href="https://www.nexon.com/Home/Sitemap"> <img
+                    src="https://pbs.twimg.com/media/Goi4ZWbW0AIarKC.jpg" style="width: 19px;" height="24px"
+                    alt="메뉴아이콘"></a>
+
+
+
+            <span class="headmenu">메뉴</span>
+
+            <h2 class="logo1">NEXON</h2>
+
+            <span class=" headinfo">회원가입</span>
+
+            <button class="headlogin">로그인</button>
+        </header>
+
+
+        <div class="banner0">
+
+            <div class="banner1">
+
+                <a
+                    href="https://ncm-file.nexon.com/news/079247667e7b4bd7b7409fb443991768_%EB%84%A5%EC%8A%A8%ED%94%8C%EB%A0%88%EC%9D%B4.png">
+                    <img src="https://www.youthdaily.co.kr/data/photos/20240311/art_17103844110225_a4f7e9.png"
+                        style="width: 100%;" height="100%" alt="">
+                </a>
+            </div>
+
+            <div class="banner2">
+
+            </div>
+
+
+
+
+            <div class="game1">
+                <h2 class="game2">추천게임</h2>
+
+
+            </div>
+
+            <div class="new0">
+                <p> <span class="newplayer">최근 플레이어 급증한</span></p>
+
+                <ul class="goodgame">
+                    <li><img class="goodgameimg1"
+                            src="https://mod-file.dn.nexoncdn.co.kr/banner/c52f7296-5cbc-464f-9009-408592667ad6.png"
+                            alt=""></li>
+                    <li><img class="goodgameimg2" src="https://rs.nxfs.nexon.com/gameusr/25/7/jWBd10142808290.png"
+                            alt=""></li>
+                    <li><img class="goodgameimg3" src="https://rs.nxfs.nexon.com/gameusr/19/7/mdO929175930313.png"
+                            alt=""></li>
+                    <li><img class="goodgameimg4" src="https://rs.nxfs.nexon.com/gameusr/24/12/xjtZ05110253380.png"
+                            alt=""></li>
+                </ul>
+            </div>
+
+
+            <div class="call">
+                고객센터
+                <hr>보안센터
+                <hr> 넥슨PC방 찾기
+            </div>
+
+            <div class="mlogin1">
+
+                <button class="ml1">NEXON ID 로그인</button>
+            </div>
+
+            <div class="mlogin2">
+
+                <button class="ml2">일회용 로그인</button>
+                <button class="ml2">QR 로그인</button>
+            </div>
+
+            <div class="mlogin3">
+                넥슨 ID찾기
+                <hr> 비밀번호 찾기
+                <hr> 회원가입
+            </div>
+
+            <div class="content">
+                <input class="content-game0" type="text" placeholder="게임명 검색" style="width: 400px;" height="300px;">
+                <input class="content-game01" type="button" value="">
+                <span class="content-game1">얼리스테이지</span>
+                <span class="content-game2">XBOX</span>
+                <span class="content-game3">macOS</span>
+                <span class="content-game4">EPIC</span>
+                <span class="content-game5">IOS</span>
+                <span class="content-game6">Andriod</span>
+                <span class="content-game7">얼리스테이지</span>
+                <span class="content-game8">playStation</span>
+                <span class="content-game9">RPG</span>
+                <span class="content-game10">액션RPG</span>
+                <span class="content-game11">캐주얼</span>
+                <span class="content-game12">FPS</span>
+                <span class="content-game13">스포츠</span>
+                <span class="content-game14">배틀로얄</span>
+                <span class="content-game15">전략</span>
+                <span class="content-game16">이벤트</span>
+            </div>
+
+            <div>
+
+            </div>
+            <div class="content-ui">
+                <div class="RPG">
+                    <h3>RPG</h3>
+                    
+                </div>
+ <div class="casual">
+    <h3>캐주얼</h3>
+ </div>
+
+                <ul>
+                    <p>
+                        <li class="col3"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename">메이플스토리</span>
+                            </a>
+
+                    </p>
+                    <p>
+                        <li class="col3"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename">프라시아전기</span>
+                            </a>
+                    </p>
+                    <p>
+                        <li class="col3"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename">히트2</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col3"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename">바람의나라</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col3"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename">아스가르디</span>
+                            </a>
+                    </p>
+                </ul>
+
+                <ul>
+                    <p>
+                        <li class="col31"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename2">마비노기 모바일</span>
+                            </a>
+
+                    </p>
+                    <p>
+                        <li class="col31"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename2">블루아카이브</span>
+                            </a>
+                    </p>
+                    <p>
+                        <li class="col31"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename2">데이브 더 다이버</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col31"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename2">테일즈위버</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col31"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename2">v4</span>
+                            </a>
+                    </p>
+                </ul>
+
+
+            </div>
+
+
+            <DIV class="content-ui2">
+                <h3 class="ARPG">액션 RPG</h3>
+
+                <ul>
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename4">던전앤파이터</span>
+                            </a>
+
+                    </p>
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename4">퍼스트버서커</span>
+                            </a>
+                    </p>
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename4">디센던트</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename4">마비노기영웅전</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename4">아스가르디</span>
+                            </a>
+                    </p>
+                </ul>
+
+                <ul>
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename5">던전앤파이터</span>
+                            </a>
+
+                    </p>
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename5">퍼스트버서커</span>
+                            </a>
+                    </p>
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename5">디센던트</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename5">마비노기영웅전</span>
+                            </a>
+                    </p>
+
+                    <p>
+                        <li class="col4"><a href="https://maplestory.nexon.com/promotion/event/2025/20250619/intro">
+                                <span class="gamename5">아스가르디</span>
+                            </a>
+                    </p>
+                </ul>
+            </DIV>
+
+
+
+
+
+
+            <footer>
+
+                <div class="last1">
+                    <p>[공지] 넥슨플레이 X 청소년연구소 제휴 이벤트 진행 안내</p>
+
+                    <p>
+                         <a class="sns1" href="https://www.youtube.com/user/NEXONKR" target="_blank">
+                            <img src="https://rs.nxfs.nexon.com/home/images/main/ico_community_youtube.svg" alt="넥슨유튜브">
+                        </a> </p>
+
+                    <p> <a class="sns2" href="https://x.com/NEXON_KR" target="_blank">
+                            <img src="https://rs.nxfs.nexon.com/home/images/main/ico_community_x_footer.svg" alt="넥슨x">
+                        </a> </p>
+
+                    <p> <a class="sns3" href="https://www.facebook.com/NEXON.KR" target="_blank">
+                            <img src="https://rs.nxfs.nexon.com/home/images/main/ico_community_facebook.svg" alt="넥슨페북">
+                        </a> </p>
+                </div>
+
+                <div class="last2">
+                    <hr>
+                    <p> <a class="guide" href="https://schoolzone.nexon.com/page/nx.aspx?url=timekeeper/intro">개인정보처리방침
+                        </a> </p>
+                    <hr>
+                    <p> <a class="guide" href="https://member.nexon.com/policy/stipulation.aspx">이용약관</a> </p>
+                    <hr>
+                    <p><a class="guide" href="">청소년 보호정책</a></p>
+                    <hr>
+                    <p><a class="guide" href="">게임IP사용가이드</a></p>
+                    <hr>
+                    <p><a class="guide" href="">게임시간선택제</a></p>
+                    <hr>
+                    <p><a class="guide" href="">고객센터</a></p>
+                    <hr>
+                    <p><a class="guide" href="">전체서비스</a></p>
+                    <hr>
+                </div>
+
+                <div class="last3">
+                    <hr>
+                    <p> <a class="guide" href="https://schoolzone.nexon.com/page/nx.aspx?url=timekeeper/intro">넥슨PC방
+                        </a> </p>
+                    <hr>
+                    <p> <a class="guide" href="https://member.nexon.com/policy/stipulation.aspx">넥슨에센셜</a> </p>
+                    <hr>
+                    <p><a class="guide" href="">회사소개</a></p>
+                    <hr>
+                    <p><a class="guide" href="">채용안내</a></p>
+                    <hr>
+                    <p><a class="guide" href="">윤리경영</a></p>
+                    <hr>
+                    <p><a class="guide" href="">넥슨브랜드가이드</a></p>
+                    <hr>
+                    <p><a class="guide" href="">광고문의</a></p>
+                    <hr>
+                </div>
+
+                <div class="COPYRIGHT1">
+                    <p>㈜넥슨코리아 대표이사 강대현·김정욱 경기도 성남시 분당구 판교로 256번길 7 전화 : 1588-7701 팩스 : 0502-258-8322</p>
+                </div>
+
+                <div class="COPYRIGHT2">
+                    <p>E-mail : contact-us@nexon.co.kr 사업자등록번호 : 220-87-17483호 통신판매업 신고번호 : 제2013-경기성남-1659호 사업자정보확인
+                    </p>
+                </div>
+
+                <div class="COPYRIGHT3">
+                    <p>© NEXON Korea Corporation All Rights Reserved.</p>
+                </div>
+
+                <div class="lastlogo">
+                    <a href=""></a>
+                    <img src="https://signpen.net/wp-content/uploads/1/cfile3.uf.126E79344C5AF751035DF4.gif"
+                        style="width: 70px;" height="30px" alt="">
+                </div>
+
+            </footer>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

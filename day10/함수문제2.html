@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+         1.  홀수인지판단하는 함수 만들기  ( 수 -> 홀수이면  true, false  반환 )
+        
+                 2.  성인판단하는 함수 만들기  (  나이  -> 20세 이상이면 true, false 반환 )
+        
+                 3.  구구단을 출력하는 함수 만들기  ( 단  -> 해당 단을 출력하기  )
+        
+                 4.  사각형의 넓이를 구하는 함수 만들기  (가로, 세로  -> 넓이를 반환하기  )
+        
+                 5.  두 수를 매개변수로 받아서  합을 구하는 함수 만들기 ( 두 수  - > 합을 반환하기 )
+        
+                 6.  두 수를 매개변수로 받아서  나머지를 구하는 함수 만들기  ( 두 수  -> 나머지를 반환하기)
+        
+                 7.  입력된 수만큼 별찍기  (  수   -> 수만큼 별찍기  )
+                   
+                 함수호출시 외부로 부터 받는 값이 필요한 것은 매개변수를 사용해 주세요 ^^
+        
+
+                  함수란: 관련있는 코드(명령)를 묶어서 붙인 것 (코드 덩어리)
+
+     !함수를 사용하는 이유는
+     1) 코드의 재사용 => 중복코드제거, 유지보수에좋다
+     2)코드분할, 나누어서 작업할때도 사용, 코드작성, 디버깅, 협업
+
+     !함수작성법: 함수선언식, 함수표현식
+
+     !함수의 입력과 반환
+
+     1)입력: 매개변수를 사용하여 외부로부터 받는 값, 함수명뒤 괄호안에 작성해야함
+    입력은 없거나 한개 여러개 있을 수 있다.
+      매개변수:함수가 호출될 때 외부에서 전달 된 값
+     함수내부에서 사용할수 있도록 해주는 변수
+     인수(argumente): 함수가 호출될 때 실제로 전달되는 값, 함수 호출시 제공된다.
+
+     2)함수가 기능을 수행하고 돌려주는 값
+       반환은 없거나 반드시 한 개여야한다
+       반환시 여러개 값을 제공하려면 배열, 객체를 사용한다.
+
+
+
+        //  기능: 
+        //  입력(매개변수): 
+        //  반환
+
+
+        */
+
+
+
+        //1번 함수이름:
+        //  기능: 홀수인지판단하는 함수 만들기  ( 수 -> 홀수이면  true, false  반환 )
+        //  입력(매개변수): su
+        //  반환:
+        function 홀짝판단(su) {
+            let result;
+            if (su % 2 == 0) {
+                result = false;
+            } else {
+
+                result = true;
+            }
+            return result;
+
+        }
+        let result1 = 홀짝판단(10);
+        console.log(result1);
+
+
+        //2번 함수이름:나이 기능: 입력(매개변수):age 반환: result
+        function 나이(age){
+            let result;
+            if (age > 20) {
+                result = true;
+            } else {
+                result = false;
+            }
+
+            return result;
+
+        }
+        let result2 = 나이(22);
+        console.log(result2);
+
+
+        //3번 구구단을 출력하는 함수 만들기  ( 단  -> 해당 단을 출력하기  )
+        //  기능: 
+        //  입력(매개변수): 
+        //  반환
+        //    function 구구단(su) {
+        //       for (su = 0; su < 9; su++) {
+
+        //     }
+        // }
+
+        //4번  사각형의 넓이를 구하는 함수 만들기  (가로, 세로  -> 넓이를 반환하기  )
+        //  기능: 수를 곱한다
+        //  입력(매개변수): ab로입력받음
+        //  반환   return max;
+        /*  function 넓이() {
+              a = Number(prompt("숫자1"));
+              b = Number(prompt("숫자2"));
+              let max = a * b;
+  
+              return max;
+  
+          }
+          let max = 넓이();
+  
+          console.log("넓이는" + max);
+  */
+        //5  두 수를 매개변수로 받아서  합을 구하는 함수 만들기 ( 두 수  - > 합을 반환하기 )
+        //  기능:  두수를 더해줌
+        //  입력(매개변수): a,b로 입력받음
+        //  반환 sum
+
+        function 합(a, b) {
+            //   let a = Number(prompt("첫수"));
+            //  let b = Number(prompt("두수"));
+            let sum = a + b;
+
+            return sum;
+        }
+
+        let sum = 합(12, 12);
+        console.log(sum);
+
+
+
+        //6 두 수를 매개변수로 받아서  나머지를 구하는 함수 만들기  ( 두 수  -> 나머지를 반환하기)
+        //기능 a&b
+        //입력 a,b로 입력받음
+        //반환  mod
+        13
+
+        function 나머지(a, b) {
+
+            let mod = a % b;
+
+            return mod;
+        }
+
+        let mod = 나머지(5, 3);
+        console.log(mod);
+
+
+
+
+
+
+
+
+        //별만들기
+        /*    function starMaker(num) {
+                let result = "";
+                for (let i = 0; i < num; i++) {
+                    result += "*";
+                }
+                return result;
+            }
+    
+            let num =prompt();
+            console.log(starMaker(num));
+    */
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //함수 : 코드덩어리에 이름을 붙인 것
+        //함수호출을 통해서 코드가 실행됨
+
+
+        //기능 : 평균구하기
+        //입력(매개변수): 정수형배열
+        //반환: 배열의 평균 값
+
+        function 평균구하기(a) {
+
+            let sum = 0;
+            for (let i = 0; i < a.length; i++) {
+                sum = sum + a[i];
+            }
+
+            let avg = sum / a.length;
+            return avg
+        }
+        let score = [90, 80, 70, 89, 60];
+        let result = 평균구하기(score);
+        console.log(result);
+
+        //기능: 로또정보를 반환하는 함수
+        //입력:x
+        //반환: 특정회차반환
+
+        //기능: 로또정보를 반환하는 함수
+        //입력:x
+        //반환: 7월달 로또정보반환
+
+        //기능: 로또정보를 반환하는 함수
+        //입력:x
+        //반환: 2025년 로또정보반환
+
+        //함수의 반환은 없거나 한개여야한다
+
+        function fun3() {
+            let a = 10, b = 3;
+            let arr = [a, b];
+            return arr;
+        }
+        {
+
+
+            let result = fun3();
+            console.log(result);
+        }
+
+        //문제1) 배열(1차원,2차원,3차원배열)을 반환하는 함수 만들기
+        //문제2) 매개변수로 입력받아서 1차원배열, 2치원배열, 3차원배열의 내용을 반환하는 함수만들기
+
+
+
+        function 로또() {
+            let arr = [22, 41, 51, 64, 24, 65];
+            return arr;
+        }
+        {
+            let result = 로또();
+            console.log(result);
+        }
+
+
+        function lotto(a, b, c, d, e, f) {
+            let arr = [a, b, c, d, e, f];
+            return arr;
+        }
+        {
+            let result = lotto(52, 51, 12, 23, 94, 21)
+            console.log(result);
+        }
+
+
+        //--------------------------------------------------------
+        function 로또1() {
+
+
+            let arr = [
+                [22, 41, 51, 64, 24, 65],
+                [52, 51, 12, 23, 94, 21]
+            ];
+            return arr[1][3];
+        }
+
+        {
+            let result = 로또1();
+            console.log(result);
+        }
+
+        function 로또2(a, b, c, d, e, f, g, h, i, j, k, l) {
+
+
+            let arr = [[a, b, c, d, e, f],
+                       [g, h, i, j, k, l]
+                      ];
+
+            return arr[1][5];
+        }
+        {
+            let result = 로또2(52, 51, 12, 23, 94, 21, 44, 51, 74, 12, 33, 65);
+            console.log(result);
+        }
+
+        function 로또3(a, b, c) {
+
+
+            let arr =
+
+                [
+                    [[22, 41, 51, 64, 24, 65],
+                    [52, 51, 12, 23, 94, 21],
+                    [2, 1, 22, 41, 90, 77],
+                    ],
+
+                    [[22, 41, 51, 64, 24, 65],
+                    [52, 51, 12, 23, 94, 21],
+                    [2, 1, 22, 41, 90, 77],
+                    ]
+
+                ];
+
+            return arr[a][b][c];
+        }
+        {
+            let result = 로또3(1, 2, 4);
+            console.log(result);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+         1.  홀수인지판단하는 함수 만들기  ( 수 -> 홀수이면  true, false  반환 )
+        
+                 2.  성인판단하는 함수 만들기  (  나이  -> 20세 이상이면 true, false 반환 )
+        
+                 3.  구구단을 출력하는 함수 만들기  ( 단  -> 해당 단을 출력하기  )
+        
+                 4.  사각형의 넓이를 구하는 함수 만들기  (가로, 세로  -> 넓이를 반환하기  )
+        
+                 5.  두 수를 매개변수로 받아서  합을 구하는 함수 만들기 ( 두 수  - > 합을 반환하기 )
+        
+                 6.  두 수를 매개변수로 받아서  나머지를 구하는 함수 만들기  ( 두 수  -> 나머지를 반환하기)
+        
+                 7.  입력된 수만큼 별찍기  (  수   -> 수만큼 별찍기  )
+                   
+                 함수호출시 외부로 부터 받는 값이 필요한 것은 매개변수를 사용해 주세요 ^^
+        
+        */
+
+
+        //별만들기
+        function starMaker(num) {
+            let result = "";
+            for (let i = 0; i < num; i++) {
+                result += "*";
+            }
+            return result;
+        }
+
+
+        let num =prompt();
+        console.log(starMaker(num));
+
+
+
+
+
+
+
+
+
+        //6번
+        function su1() {
+
+            let c = Number(prompt("첫 번째 수 입력:"));
+            let d = Number(prompt("두 번째 수 입력:"));
+            let sum = c % d;
+
+            return sum;
+
+
+        }
+
+        let result6 = su1();
+        console.log(result6);
+
+
+
+        //5번
+        function su() {
+
+            let a = Number(prompt("첫 번째 수 입력:"));
+            let b = Number(prompt("두 번째 수 입력:"));
+            let sum = a + b;
+
+            return sum;
+
+
+        }
+
+        let result5 = su();
+        console.log(result5);
+
+
+
+
+
+        //2번
+        function age() {
+            let su = Number(prompt("나이입력"));
+            if (su >= 20) {
+                console.log("성인");
+            } else {
+                console.log("미성년자");
+            }
+
+            return su >= 20;
+
+
+        }
+
+        let result2 = age();
+        console.log(result2);
+
+
+
+
+
+        //1번
+        function num(su) {
+            
+
+            if (su % 2 == 0) {
+
+                alert("짝수");
+            } else {
+                alert("홀수");
+            }
+
+            return su 
+        }
+
+
+        let result = num(14);
+        alert(result);
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
