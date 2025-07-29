@@ -133,48 +133,44 @@
 
         let prices2 = [];
 
-        for (let i = 0; i < prices.length; i++) {
+        for (i = 0; i < prices.length; i++) {
             if (prices[i] > 1200) {
-                prices2.push(prices[i]); //조건만족 값만 prices2 배열에 추가
+                prices2.push(prices[i]);
             }
 
         }
         console.log(prices2);
 
 
+
         //------------------------------------------------------------------------------------
         //10.  문제: 아래 numbers 배열의 각 요소를 2배로 만든 새로운 배열을 만드세요.
         const numbers3 = [1, 2, 3, 4, 5];
-        let 곱하기 = [];
+        let num = [];
 
         for (let i = 0; i < numbers3.length; i++) {
-
-            곱하기.push(numbers3[i] * 2);
+            num.push(numbers3[i] * 2);
         }
-
-        console.log(곱하기);
-
-
-
+        console.log(num);
 
 
         //------------------------------------------------------------------------------------
         //11.  문제 :아래  fruits 배열에  자두 포함 여부 true, false 출력하시오 
         let fruits = ["자두", "복숭아", "포도"];
+        let 포함여부 = false;
+
 
 
         let 자두 = fruits[0];
 
-        let 포함여부 = false;
 
         for (let i = 0; i < fruits.length; i++) {
-            if (fruits[i] == 자두) {
-                let 포함여부 = true;
-                console.log(true);
+            if (fruits[i] == "자두") {
+                포함여부 = true;
+                break;
             }
-            console.log(false);
-           
         }
+        console.log(포함여부);
 
 
         //------------------------------------------------------------------------------------
@@ -192,8 +188,8 @@
         let fruits3 = ["자두", "복숭아", "포도"];
         let fruits4 = [];
 
-        for (let i = fruits2.length - 1; i >= 0; i--) {
-            console.log(fruits2[i]);
+        for (let i = fruits3.length - 1; i >= 0; i--) {
+            console.log(fruits3[i]);
             fruits4.push(fruits3[i]);
 
         }

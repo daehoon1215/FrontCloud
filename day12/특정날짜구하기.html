@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let date = new Date("2025-07-14");
+        date.setDate(date.getDate() + 198);
+
+        let year2 = date.getFullYear();
+        let month2 = date.getMonth();
+        let date2 = date.getDate();
+
+        document.getElementById("result").innerHTML = `년도  ${year2} 월 ${month2} 일${date2}`;
+    </script>
+</body>
+
+</html>

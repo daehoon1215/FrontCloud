@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        //객체
+        //속성(변수) + 기능(매세드,함수)으로 이루어진 독립적인 단위
+
+
+        let title = {
+            name: "심청이",
+            species: "페닐슐라쿠터",
+            color: "초록색",
+            age: 5,
+            weight: "800g",
+            likeFood: "건새우",
+
+            printInfo: function () {
+                //  alert("hi");
+                // alert(this.name + this.age);
+                 alert(`${this.name} ${this.color} ${this.weight}`);
+            },
+
+            eat : function(food){
+                if(food==="건새우"){
+                    alert("몸을 흔들면서 좋아함");
+                }else{
+                    alert("그냥먹음");
+                }
+            }
+
+        };
+
+        //개체의 메소드(함수)에서 객체의 속성을 접근하려면 this 키워드 사용
+        // => this 자신을 의미하는값
+
+        console.log(title.name);
+        title.printInfo();
+        title.eat("건새우");
+
+
+
+    </script>
+</body>
+
+</html>

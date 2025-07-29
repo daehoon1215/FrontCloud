@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function 인사하기1(name) {
+            alert("안녕", name);
+
+        }
+        //  인사하기1("주연");
+
+        function 인사하기2(name) {
+            alert("안녕22", name);
+
+        }
+        //   인사하기2("주연");
+
+        //고차함수 만들기
+        //매개변수로 함수를 받는 함수를  고차원함수라고함
+        // 매개변수로 함수를 전달받는 함수
+
+        //기능:인사하기'
+        //입력(배개변수)
+
+        function 인사하기H(k, name) {
+            alert(k() + name);
+        }
+
+        //이름없는 함수
+        //이름 없는 함수(익명)
+
+        function formax() {
+            return "안녕하세요"
+        }
+
+        function formaE() {
+            return "hello"
+        }
+
+        인사하기H(fonrmax);// formaxH는 콜벡함수라고부른다
+
+
+        인사하기H(formaxE);// formaxE는 콜벡함수라고부른다
+
+        //콜백함수: 함수호출시 전달도는 함수
+        //: 또는 고차함수의 매개변수로 전달되는 함수를 말한다
+
+
+
+    </script>
+</body>
+
+</html>

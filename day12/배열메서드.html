@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let scores = [90, 80, 70, 50];
+
+        //모든 학생의 점수출력
+    //    for (let i = 0; i < scores.length; i++) {
+
+   //     }
+    //    console.log(scores[i]);
+        //배열의 메서드를 제공함
+        //forEach사용하기
+
+        //배열.forEach(콜벡함수)
+        //forEach() 메서드내에서 빈복이수행돰
+        //반복하면서 수행할 코드를 콜벡함수로 전달
+
+
+
+        scores.forEach(function (item, index) {
+            alert(item + "," + index);
+        });
+
+/*
+        scores.forEach(function (item) {
+            alert(item + "^^ ");
+        });
+
+        scores.forEach(function (a, b) {
+            alert(a + "^^ " + b);
+        });
+
+
+        scores.forEach(function () {
+            console.log("kk");
+        });
+
+        scores.forEach(function (item) {
+            console.log(item);
+        });
+
+        scores.forEach((item) => {
+            console.log(item + "^^^^^^^^");
+        });
+
+        scores.forEach((item) => console.log(item + "!!!"));
+
+        let names = ["손민양", "애치린", "우도훈"];
+
+        names.forEach(function (item) { console.log(item) });
+
+
+
+    </script>
+</body>
+
+</html>

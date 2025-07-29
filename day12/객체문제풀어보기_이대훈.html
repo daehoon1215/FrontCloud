@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const snack = {
+            name: "파스타",
+            price: 15000,
+            flavor: "치킨스톡",
+            flavors: ["original", "cheese", "tomato", "cream"],
+            manufacturing: {
+                country: "Korea",
+                factory: "인천",
+                factory1: "부평구 ",
+                factory2: "부평동",
+            },
+            promotions: {
+                discount: 10, // 10% 할인
+                offerValidUntil: "2025-01-31"
+            },
+
+            showinfo: function () {
+                console.log(`${this.name}다` , `${this.price}이고 ${this.flavor}이다`);
+           
+
+
+
+
+
+            }
+
+        };
+        snack.showinfo();
+
+
+
+
+        console.log(`이 음식의 이름은${snack.name}고`, `가격은${snack.price}입니다`,
+            `육수는${snack.flavor}입니다`, `${snack.flavors[2]}이다` + "가게는" + snack.manufacturing.country +
+            snack.manufacturing.factory + snack.manufacturing.factory1 + snack.manufacturing.factory2,
+            `현재 할인이${snack.promotions.discount}%이고`, `기간은${snack.promotions.offerValidUntil}이니 어서오세요`
+
+        );
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

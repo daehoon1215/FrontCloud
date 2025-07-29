@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let species=["푸들","달마시안","진도","시바"];
+
+        function myForEach(callback){
+            for(let i=0; i<species.length; i++){
+                let item=species[i];
+
+                callback(item);
+
+            }
+        }
+        myForEach(function(value){
+            console.log(value);
+        });
+
+    </script>
+    
+</body>
+</html>

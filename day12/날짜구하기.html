@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //자바스크립트가 제공하는 내장객체
+        //Math => 수학관련기능제공
+        //Date => 날짜관련기능제공
+        //String =>문자열관련기능제공
+
+        //현재날짜구하기
+        let count = new Date();
+        console.log(count);
+
+        //현재연도구하기
+        let year = count.getFullYear();
+        console.log(year);
+
+        //현재월구하기
+        let month = count.getMonth() + 1; //0월부터시작 +1필수
+        console.log(month);
+
+        //현재일구하기
+        let day = count.getDate(); //0월부터시작 +1필수
+        console.log(day);
+
+        //현재요일구하기
+        let day1 = count.getDay(); //0월부터시작 +1필수
+        console.log(day1); //2  일요일-월요일=화요일순서대로반복
+
+        let days = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "일요일"];
+
+        console.log(days[5]); 
+
+        //특정날짜를 중심으로 기념일정하기
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    </script>
+</body>
+
+</html>

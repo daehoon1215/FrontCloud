@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*      let flavor = ["단맛", "짠맛", "신맛", "매운맛", "달콤맛"];
+      
+              function myforEach(callback) {
+                  for (let i = 0; i < flavor.length; i++) {
+                      let item = flavor[i]; 
+      
+                      callback(item); 
+                  }
+      
+              }
+             myforEach(function(value){
+              console.log(value);
+             });
+      */
+
+
+
+        let fruits = ["자두", "복숭아", "포도", "파인"];
+
+        function myForEach(callback) {
+            for (let i = 0; i < fruits.length; i++) {
+                let item = fruits[i];
+                callback(item);
+            }
+        }
+        myForEach(function (value) {
+            console.log(value);
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
