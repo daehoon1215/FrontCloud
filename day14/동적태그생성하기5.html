@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function addbtn() {
+            console.log("fsaf")
+
+            const btntag = document.createElement("button");
+            btntag.textContent = "출력하시오"
+
+            btntag.addEventListener("click", function () {
+                alert("hl");
+
+            });
+
+            const wrap = document.getElementById("wrap");
+
+            wrap.appendChild(btntag);
+
+
+
+        }
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <button onclick="addbtn()">버튼태그</button>
+    <!--부모영역정하기-->
+    <div id="wrap"></div>
+
+</body>
+
+</html>
+
+

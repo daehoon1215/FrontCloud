@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function getmovie1() {
+            const movie = document.getElementById("movie");
+            const p1 = movie.firstElementChild;
+            alert(p1.innerHTML);
+        }
+
+
+        function getmovie2() {
+            const movie = document.getElementById("movie");
+            const first = movie.firstElementChild;
+            const second = first.nextElementChild
+            alert(second.innerHTML);
+
+        }
+
+
+        function getmovie3() {
+            const movie = document.getElementById("movie");
+            const first = movie.firstElementChild;
+            const second = first.nextElementChild
+            const third = second.nextElementChild
+
+            alert(third.innerHTML);
+
+            const laseE = movie.lastElementChild
+
+            alert(third.innerHTML);
+        }
+
+
+        function getPar() {
+            const speed = document.getElementById(".speed");
+            const movie = speed.parentElement;
+            console.log(movie);
+        }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <div id="movie">
+        <p>아바타</p>
+        <p>스피드</p>
+        <p>메트릭스</p>
+
+    </div>
+
+
+    <button onclick="getmovie1()">첫 번째 영화</button>
+    <button onclick="getmovie2()">두 번째 영화</button>
+    <button onclick="getmovie3()">세 번째 영화</button>
+    <button onclick="getPar()">세 번째 영화</button>
+
+
+
+
+</body>
+
+</html>

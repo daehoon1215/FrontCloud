@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // function getlottonum() {
+        //      const lottonum = [15, 23, 45, 1, 62, , 67]
+        //      return lottonum;
+        //  }
+        //  const result = getlottonum;
+        // console.log(result);
+
+
+        function getlottonum2() {
+            const lottonum = [];
+
+            let random = Math.floor(Math.random() * 45) + 1
+            lottonum.push(random);
+
+            random = Math.floor(Math.random() * 45) + 1
+            lottonum.push(random);
+
+            random = Math.floor(Math.random() * 45) + 1
+            lottonum.push(random);
+
+            random = Math.floor(Math.random() * 45) + 1
+            lottonum.push(random);
+
+            random = Math.floor(Math.random() * 45) + 1
+            lottonum.push(random);
+
+            random = Math.floor(Math.random() * 45) + 1
+            lottonum.push(random);
+
+            return lottonum;
+        }
+
+        const result2 = getlottonum2();
+        console.log(result2);
+
+
+        function getlottonum3() {
+            const lottonum = [];
+
+            while (lottonum.length < 6) {
+                const random = Math.floor(Math.random() * 45) + 1;
+                if (!lottonum.includes(random)) {
+                    lottonum.push(random);
+                }
+
+
+            }
+            return lottonum;
+        }
+        const result3 = getlottonum3();
+        console.log(result3);
+
+
+
+    </script>
+
+
+</body>
+
+</html>

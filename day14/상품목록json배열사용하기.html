@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .product-list {
+            display: flex;
+        }
+
+
+        .product-list>li {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+        .product-list>li img {
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+
+
+    <script>
+
+        function addproduct() {
+
+
+            const productlist = [
+                {
+                    img: "https://asset.m-gs.kr/prod/65189468/1/250",
+                    title: "돌김자반",
+                    price: 15900
+                },
+                {
+                    img: "https://asset.m-gs.kr/prod/60515801/1/250",
+                    title: "허브차",
+                    price: 15000
+                }
+            ];
+
+
+            //배열반복하면서 li태그생성
+            //부모얻어오기
+
+            const producwrap = document.querySelector(".product-list");
+
+            productlist.forEach(function (item) { //포이치로 하나씩 프로덕트리스트바복
+                const li = document.createElement("li"); //새 태그 엘아리를 생산
+                li.innerHTML =  //이너에이티엠엘로 엘아리 만들어서 백틱으로 내용으 채운다
+
+              ` <img src="${item.img}">
+                    <p>${item.title}</p>
+                   <p>${item.price}</p>`;
+
+                producwrap.appendChild(li);  //보이게한다
+
+            });
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <button onclick="addproduct()">더보기</button>
+
+    <ul class="product-list">
+
+        <!--
+        <li>
+            <img src="https://i.namu.wiki/i/HX1Qyl83AVq-n396Hzc2n71ipN3Sf3Zyk0X1QUJh6eoBrs1BSmQj77e_X7iH0NFejIaKOyyADoN18c-m_aCTLQ.webp"
+                alt="도감">
+            <p>15900</p>
+            <p>돌감자</p>
+
+
+        </li>
+
+        <li>
+            <img src="https://asset.m-gs.kr/prod/60515801/1/250" alt="도감">
+            <p>25900</p>
+            <p></p>
+        </li>
+
+        -->
+
+
+    </ul>
+
+
+
+</body>
+
+</html>
