@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+
+            transition: 2s ;
+
+            /*
+            transition-property: background-color;
+            transition-duration : 2s ;   애니메이션지속시간
+            transition-timing-function : ease  ;    // ease, linear, ease-in, ease-out, ease-in-out  애니메이션 진행속도
+            transition-delay :1s  ; 애니메이션을 1초동안 지연시킨다
+          transition: background-color 2s ease 1s;
+            transition-property: background-color;
+            transition-duration : 2s ;    
+            transition-timing-function : ease  ;     
+            transition-delay :1s  ;
+                                            */
+        }
+
+        .item:hover{
+            background-color: red;
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="item"></div>
+</body>
+
+</html>

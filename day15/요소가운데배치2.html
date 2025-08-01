@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .wrap {
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .item {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*x축, y축 이달*/
+        }
+
+        .item:hover{
+            transition: 1s;
+            background-color: aqua;
+            transform: rotate(40deg);
+         
+            
+        }
+
+    </style>
+
+
+
+</head>
+
+
+<body>
+
+
+    <div class="wrap">
+        <div class="item"></div>
+    </div>
+
+</body>
+
+</html>

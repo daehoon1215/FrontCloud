@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Swiper CSS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+    <script>
+
+
+
+
+        window.addEventListener("load", function () {
+            new Swiper(".promotion .swiper", {
+                slidesPerView: 3, //보여주는 슬라이드
+                spaceBetween: 10, //슬라이더 사이 여백
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 2500
+                },
+
+                speed: 1000,
+
+                pagination: {
+                    el: ".promotion .swiper-pagination",
+                    clickable: true
+                },
+
+                navigation: {
+                    nextEl: ".promotion .swiper-button-next",
+                    prevEl: ".promotion .swiper-button-prev",
+                },
+
+
+            });
+            const lastpic = document.createElement("div");
+            lastpic.classList.add("lastpic")
+
+            document.body.appendChild(lastpic);
+
+        });
+
+    </script>
+
+    <style>
+        .lastpic {
+            margin: 0 auto;
+            height: 1200px;
+            width: 12000px;
+            border: 1px solid black;
+        }
+
+        
+        .swiper-slide {
+            transition: 0.6s;
+        }
+
+        .swiper-slide:hover {
+
+            transform: scale(1.5);
+        }
+
+        .swiper-slide>img {
+            width: 250px;
+            height: 250px;
+
+
+        }
+
+
+        .swiper {
+            width: 930px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .swiper-pagination {
+            color: aqua;
+
+        }
+
+        .swiper-button-next {
+            color: #ccc;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <section class="notice">
+        <!--광고슬라이더 전신-->
+        <div class="promotion">
+            <div class="swiper"> <!--전체틀-->
+
+                <div class="swiper-wrapper"> <!--스와이플둘러싼 틀-->
+
+
+                    <div class="swiper-slide"> <img src="images/promotion1.jpg"></div>
+                    <div class="swiper-slide"> <img src="images/promotion2.jpg"></div>
+                    <div class="swiper-slide"> <img src="images/promotion3.jpg"></div>
+
+                    <div class="swiper-slide"> <img src="./images/badage1.jpg"></div> <!--하나하느 틀-->
+                    <div class="swiper-slide"> <img src="./images/badage2.jpg"></div>
+                    <div class="swiper-slide"> <img src="./images/cups1.jpg"></div>
+
+
+                </div>
+
+
+
+                <div class="swiper-pagination"></div> <!--네비게이션버튼생성-->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>

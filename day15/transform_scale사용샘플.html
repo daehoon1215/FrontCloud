@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .item-wrap {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+
+            overflow: hidden;
+           
+        }
+
+        .item {
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+            background-image: url(https://media.istockphoto.com/id/1317323736/ko/%EC%82%AC%EC%A7%84/%EB%82%98%EB%AC%B4-%EB%B0%A9%ED%96%A5%EC%9C%BC%EB%A1%9C-%ED%95%98%EB%8A%98%EB%A1%9C-%EB%B0%94%EB%9D%BC%EB%B3%B4%EB%8A%94-%EA%B2%BD%EC%B9%98.jpg?s=612x612&w=0&k=20&c=0xTghmMTXJ5ITCZ-LKTABbaPIK_1kWNf0FSFl_GL_7I=);
+            background-position: center;
+            background-size: cover;
+
+            transition: 1s;  /*실행시간*/
+            
+        }
+
+        .item:hover {
+            transform: scale(2);
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <h2>scale이용해서 커지는 이미지 만들길</h2>
+
+    <div class="item-wrap">
+        <!--div 배경에다가 이미지-->
+        <div class="item"> </div>
+    </div>
+</body>
+
+</html>
