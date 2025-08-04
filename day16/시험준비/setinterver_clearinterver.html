@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn-start">3초마다 텍스트가 바뀐다</button>
+    <button id="btn-close">그만</button>
+
+    <script>
+        let Intervalid;
+        const btnStart = document.getElementById("btn-start");
+        const btnClose = document.getElementById("btn-close");
+        btnStart.addEventListener("click", function () {
+
+            //일정간격으로 특정코드 수행
+            //콜백함수, 밀리초
+            Intervalid = setInterval(function () {
+                alert("바뀐다")
+            }, 3000);
+
+        });
+
+        btnClose.addEventListener("click", stopchange);
+
+        function stopchange() {
+            clearInterval(Intervalid);
+        }
+
+
+    </script>
+</body>
+
+</html>
