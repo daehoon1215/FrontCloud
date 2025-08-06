@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 2000px;
+            margin: 0 auto;
+            /*나중에 제거 혹은 유지*/
+            background-color: rgb(253, 251, 247);
+        }
+
+        /*메인태그 메인이미지 글자 위치잡아줌*/
+        .mainimagetag {
+            position: relative;
+
+
+        }
+
+        /*메인태그속 글자*/
+        .mainimagetag p {
+            position: absolute;
+            color: white;
+            bottom: 20%;
+            left: 5%;
+            font-weight: 600;
+            font-size: 31px;
+        }
+
+        /*메인태그속 이미지*/
+        .mainimagetag img {
+            width: 100%;
+            height: 635px;
+            display: block;
+            object-fit: cover;
+            /*이미지 끝 안맞음*/
+
+        }
+
+
+
+        /*상품 바디*/
+        .productBody-life {
+            height: 2562.750px;
+            border: 1px solid black;
+
+        }
+
+
+        /* 리스트(기본몸)*/
+        .productBox-life {
+            width: 1480px;
+            height: 2562.750px;
+            margin: 0 auto;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+
+        /*유엘(틀)*/
+        .productUl-life {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            margin-top: 16px;
+            padding: 0;
+            list-style: none;
+
+
+        }
+
+
+        /*엘아이(그림)*/
+        .productli-life {
+            flex: 0 0 calc(33.3% - 16px);
+            box-sizing: border-box;
+            position: relative;
+            height: 481.94px;
+            background-color: rgb(249, 246, 240);
+            overflow: hidden;
+
+        }
+
+
+        /*박스엘아이 안  이름,가격영역*/
+        .productli-Box {
+            position: absolute;
+            width: 100%;
+            height: 150.750;
+            box-sizing: border-box;
+            bottom: -50px;
+            text-align: center;
+            font-weight: 600;
+            color: gray;
+
+
+        }
+
+
+        /*박스엘아이 안 상품이름*/
+        .productli-Font {
+            height: 100px;
+            font-size: 18px;
+            color: black;
+            font-weight: 450;
+            align-items: center;
+
+        }
+
+
+        /*박스엘아이 안 상품가격*/
+        .productli-Price {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 0;
+            background-color: #545454;
+            opacity: 0;
+
+        }
+
+
+
+
+        /*박스엘아이 안 상품이미지*/
+        .productli-life img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            bottom: 50px;
+            transition: 1s;
+
+        }
+
+
+        /*박스엘아이 안 호버상품이미지*/
+        .productli-life .img-hover {
+            opacity: 0;
+        }
+
+        /*마우스가 올라가면 호버이미지 띄위기*/
+        .productli-life:hover .img-hover {
+            opacity: 1;
+            transform: scale(1.2);
+
+        }
+
+        /*마우스가 올라가면 기본 이미지 흐리기*/
+        .productli-life:hover img {
+            opacity: 0;
+
+        }
+
+        /*마우스가 올라가면 상품설명,이름 흰색으로 변경*/
+        .productli-life:hover .productli-Box,
+        .productli-life:hover .productli-Font {
+            color: white;
+        }
+
+        /*마우스가 올라가면 가격표가 보이게하기*/
+        .productli-life:hover .productli-Price {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--메인이미지-->
+    <div class="mainimagetag">
+        <img src="
+    
+ 
+   //kr.bluebottlecoffee.com/cdn/shop/collections/Acacia-Pearl-Scale-M4-Lifestyle-Desktop_2.jpg?v=1736899243 3000w
+                     
+                        
+" alt="메인이미지">
+        <p>브루잉 도구</p>
+    </div>
+
+    <!--브루밍바디-->
+    <div class="productBody-life">
+
+        <!--브루밍박스-->
+        <div class="productBox-life">
+
+            <!--브루밍유엘-->
+            <ul class="productUl-life ">
+
+
+
+
+                <!--브루밍도구-브루잉 도구 1-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                 
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Hario-Cold-Brew-Pitcher-M1-Hero.png?v=1743660331&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Hario-Cold-Brew-Pitcher-M1-Hero.png?v=1743660331 1600w
+                
+
+                
+                
+                " alt="콜드브루 피처">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                 //kr.bluebottlecoffee.com/cdn/shop/files/Hario-Cold-Brew-Pitcher-Hover.jpg?v=1743660335&width=1066 1066w,
+
+                  
+                  
+                  " alt="콜드브루 피처 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">콜드브루 피처</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩48,000원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 2-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                 
+                  
+                  //kr.bluebottlecoffee.com/cdn/shop/files/BBCxBodum-French-Press-M1-Hero.png?v=1743661589&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/BBCxBodum-French-Press-M1-Hero.png?v=1743661589 1600w
+                
+
+                
+                
+                " alt="프렌치 프레스">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                //kr.bluebottlecoffee.com/cdn/shop/files/Bodum-French-Press-Blue-M1-Hero.png?v=1743661596&width=1066
+                  
+                  
+                  " alt="프렌치 프레스 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">프렌치 프레스</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩68,000원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 3-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Blue-Bottle-Pour-Over-Kit-M1-Component-Detail_33a04dbb-0db8-4406-8655-adf975529cc2.png?v=1730100908&width=1066 1066w,
+
+
+                
+                
+                " alt="블루보틀 푸어 오버 키트">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                   //kr.bluebottlecoffee.com/cdn/shop/files/Blue-Bottle-Pour-Over-Kit-Hover-M2.jpg?v=1730100914&width=1066 1066w,
+
+
+                  
+                  
+                  " alt="블루보틀 푸어 오버 키트 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">블루보틀 푸어 오버 키트</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩49,700원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 4-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_1600x1600_20250116_717d8b2e-d942-46b7-92b9-9c5735d46523.png?v=1737339418&width=1066 1066w,
+
+
+                
+                
+                " alt="하리오 우드 주전자">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                 
+                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_1000x1250_20250116-2_cfa0f22c-42ca-42a5-8888-ca21420301df.jpg?v=1737339422&width=1066 1066w,
+                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_1000x1250_20250116-2_cfa0f22c-42ca-42a5-8888-ca21420301df.jpg?v=1737339422 1000w
+                  
+                  
+                  " alt="하리오 우드 주전자 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">하리오 우드 주전자</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩78,000원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 5-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                 //kr.bluebottlecoffee.com/cdn/shop/files/Blue-Bottle-Coffee-Dripper-M1-Hero.png?v=1720050029&width=1066 1066w,
+
+
+                
+                
+                " alt="블루보틀 커피 드리퍼">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                  //kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_Blue-Bottle-Coffee-Dripper-Image_01.jpg?v=1722297219&width=1066 1066w,
+
+                  
+                  " alt="블루보틀 커피 드리퍼 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">블루보틀 커피 드리퍼</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩28,000원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 6-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                 
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Coffee-Carafe-M1-Hero.png?v=1720050051&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Coffee-Carafe-M1-Hero.png?v=1720050051 1600w
+                
+
+                
+                
+                " alt="블루보틀 커피 카라페(50ml)">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                 
+                    //kr.bluebottlecoffee.com/cdn/shop/files/Coffee-Carafe-Hover-M2.jpg?v=1722213833&width=1066 1066w,
+                    //kr.bluebottlecoffee.com/cdn/shop/files/Coffee-Carafe-Hover-M2.jpg?v=1722213833 1000w
+                  
+
+                  
+                  
+                  " alt="블루보틀 커피 카라페(50ml) 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">블루보틀 커피 카라페(50ml)</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩20,000원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 7-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                 
+                
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Hario-Cold-Brew-Bottle-Blue-M1-Hero.png?v=1720050035&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/Hario-Cold-Brew-Bottle-Blue-M1-Hero.png?v=1720050035 1600w
+                
+
+                
+                
+                " alt="콜드브루 보틀">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                   //kr.bluebottlecoffee.com/cdn/shop/files/Hario-Cold-Brew-Bottle-Grey-Hover.jpg?v=1722212842&width=1066 1066w,
+
+                  
+                  
+                  " alt="콜드브루 보틀 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        브루잉 도구
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">콜드브루 보틀</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩35,000원</p>
+                    </div>
+                </li>
+
+
+                <!--브루밍도구-브루잉 도구 8-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                
+                 
+                
+                   //kr.bluebottlecoffee.com/cdn/shop/files/Blue-Bottle-Coffee-Filters-M1-Hero.png?v=1720050038&width=1066 1066w,
+
+                
+                
+                " alt="블루보틀 커피 필터">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                   
+                  
+                 //kr.bluebottlecoffee.com/cdn/shop/files/Blue-Bottle-Coffee-Filters-Hover-M2_b3354831-e623-492c-b429-ab683f934efe.jpg?v=1722213884&width=1066 1066w,
+
+                  
+                  " alt="블루보틀 커피 필터 호버">
+
+                    <!--브루밍 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        필터
+
+                        <!--브루밍 박스엘아이 안 이름-->
+                        <p class="productli-Font">블루보틀 커피 필터</p>
+                    </div>
+
+                    <!--브루밍 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩5000원</p>
+                    </div>
+                </li>
+
+
+
+
+
+
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

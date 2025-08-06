@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 2000px;
+            margin: 0 auto;
+            /*나중에 제거 혹은 유지*/
+            background-color: rgb(253, 251, 247);
+        }
+
+        /*메인태그 메인이미지 글자 위치잡아줌*/
+        .mainimagetag {
+            position: relative;
+
+
+        }
+
+        /*메인태그속 글자*/
+        .mainimagetag p {
+            position: absolute;
+            color: white;
+            bottom: 20%;
+            left: 5%;
+            font-weight: 600;
+            font-size: 31px;
+        }
+
+        /*메인태그속 이미지*/
+        .mainimagetag img {
+            width: 100%;
+            height: 635px;
+            display: block;
+            object-fit: cover;
+            /*이미지 끝 안맞음*/
+
+        }
+
+
+
+        /*상품 바디*/
+        .productBody-life {
+            height: 2562.750px;
+            border: 1px solid black;
+
+        }
+
+
+        /* 리스트(기본몸)*/
+        .productBox-life {
+            width: 1480px;
+            height: 2562.750px;
+            margin: 0 auto;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+
+        /*유엘(틀)*/
+        .productUl-life {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            margin-top: 16px;
+            padding: 0;
+            list-style: none;
+
+
+        }
+
+
+        /*엘아이(그림)*/
+        .productli-life {
+            flex: 0 0 calc(33.3% - 16px);
+            box-sizing: border-box;
+            position: relative;
+            height: 481.94px;
+            background-color: rgb(249, 246, 240);
+            overflow: hidden;
+
+        }
+
+
+        /*박스엘아이 안  이름,가격영역*/
+        .productli-Box {
+            position: absolute;
+            width: 100%;
+            height: 150.750;
+            box-sizing: border-box;
+            bottom: -50px;
+            text-align: center;
+            font-weight: 600;
+            color: gray;
+
+
+        }
+
+
+        /*박스엘아이 안 상품이름*/
+        .productli-Font {
+            height: 100px;
+            font-size: 18px;
+            color: black;
+            font-weight: 450;
+            align-items: center;
+
+        }
+
+
+        /*박스엘아이 안 상품가격*/
+        .productli-Price {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 0;
+            background-color: #545454;
+            opacity: 0;
+
+        }
+
+
+
+
+        /*박스엘아이 안 상품이미지*/
+        .productli-life img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            bottom: 50px;
+            transition: 1s;
+
+        }
+
+
+        /*박스엘아이 안 호버상품이미지*/
+        .productli-life .img-hover {
+            opacity: 0;
+        }
+
+        /*마우스가 올라가면 호버이미지 띄위기*/
+        .productli-life:hover .img-hover {
+            opacity: 1;
+            transform: scale(1.2);
+
+        }
+
+        /*마우스가 올라가면 기본 이미지 흐리기*/
+        .productli-life:hover img {
+            opacity: 0;
+
+        }
+
+        /*마우스가 올라가면 상품설명,이름 흰색으로 변경*/
+        .productli-life:hover .productli-Box,
+        .productli-life:hover .productli-Font {
+            color: white;
+        }
+
+        /*마우스가 올라가면 가격표가 보이게하기*/
+        .productli-life:hover .productli-Price {
+            opacity: 1;
+        }
+
+
+
+        /*박스엘아이 안 상품이미지 위 '신제품'태그*/
+        .productBadge-life {
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 15px;
+            background: #545454;
+            transform: rotate(45deg);
+            position: absolute;
+            right: -40px;
+            top: 30px;
+            width: 180px;
+            height: 40px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--메인이미지-->
+    <div class="mainimagetag">
+        <img src="//kr.bluebottlecoffee.com/cdn/shop/collections/BBC_PLP_HumanMade_Desktop.jpg?v=1730765835 2000w
+" alt="메인이미지">
+        <p>라이프스타일</p>
+    </div>
+
+    <!--라이프바디-->
+    <div class="productBody-life">
+
+        <!--라이프박스-->
+        <div class="productBox-life">
+
+            <!--라이프유엘-->
+            <ul class="productUl-life ">
+
+
+
+
+                <!--라이프 엘아이(그림)첫번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  //kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1600x1600_16510637-08b6-4cb1-9a4d-2da842234e69.png?v=1744701097
+                " alt="화이트모카 강냉이">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                    //kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1000x1250_a7aba477-0726-431f-8890-6a534b309c7a.jpg?v=1744701097&width=1066 1066w,
+                    //kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1000x1250_a7aba477-0726-431f-8890-6a534b309c7a.jpg?v=1744701097 1000w
+                  " alt="화이트모카 강냉이 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">화이트 모카 강냉이</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩6,800원</p>
+                    </div>
+                </li>
+
+
+
+                <!--라이프 엘아이(그림)두번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+
+                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_001.png?v=1728365701&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_001.png?v=1728365701 1600w
+                
+                " alt="엠브로이더리 에코 백 미니 -커피 리프-">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src=" 
+
+                    //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_002.jpg?v=1728365709&width=1066 1066w,
+                    //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_002.jpg?v=1728365709 1600w
+                
+                  " alt="엠브로이더리 에코 백 미니 -커피 리프 호버-">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">엠브로이더리 에코 백 미니 -커피 리프-</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩60,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)세번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                 
+                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_EmbroideredTote_BBC.png?v=1747708847&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_EmbroideredTote_BBC.png?v=1747708847 1600w
+                
+                " alt="엠브로이더리 에코 백-블루보틀-">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                   
+                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_Sub-Hover_EmbroideredTote_BBC.jpg?v=1747708847&width=1066 1066w,
+                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_Sub-Hover_EmbroideredTote_BBC.jpg?v=1747708847 1000w
+                  
+                  " alt="엠브로이더리 에코 백-블루보틀 호버-">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">엠브로이더리 에코 백-블루보틀-</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩80,000원</p>
+                    </div>
+
+                    <!--신상품뱃지-->
+                    <div class="productBadge-life">
+                        <p>신제품</p>
+
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)네번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+
+                     //kr.bluebottlecoffee.com/cdn/shop/files/241213_BBCJ0172_pre-edited_1600x1600_801fcd32-d4fd-4a57-8b7f-6cece3f0edab.png?v=1742264718&width=1066 1066w,
+
+                " alt="키요스미 토트백 10주년 에디션">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+
+                  //kr.bluebottlecoffee.com/cdn/shop/files/241213_BBCJ0047_pre_D2_MO.jpg?v=1742264728&width=1066 1066w,
+
+                  " alt="키요스미 토트백 10주년 에디션 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">키요스미 토트백 10주년 에디션</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩90,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)다섯번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                 
+                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600.png?v=1741914796&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600.png?v=1741914796 1600w
+                
+                " alt="커피트럭 키 체인">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                    
+                    //kr.bluebottlecoffee.com/cdn/shop/files/1000x1250_fb8fe61e-2465-4ce0-b3b0-19e62ae0b9a4.jpg?v=1741914798&width=1066 1066w,
+                    //kr.bluebottlecoffee.com/cdn/shop/files/1000x1250_fb8fe61e-2465-4ce0-b3b0-19e62ae0b9a4.jpg?v=1741914798 1000w
+                  
+                  " alt="커피트럭 키 체인 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">커피트럭 키 체인</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩20,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)여섯번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                 
+                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_1600x1600_20250116.png?v=1737338968&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_1600x1600_20250116.png?v=1737338968 1600w
+                
+                " alt="런치백">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_1000x1250_20250116-2.jpg?v=1737338969&width=1066 1066w,
+
+                  " alt="런치백 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">런치백 </p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩70,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)일곱번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                  
+                  //kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_01_1600x1600_4c38f0a0-4e7d-4b89-88cd-51854d785762.png?v=1731906814&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_01_1600x1600_4c38f0a0-4e7d-4b89-88cd-51854d785762.png?v=1731906814 1600w
+                
+                " alt="마켓백">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+
+                  //kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_02_1600x1600_999945ce-5bfa-4aae-9da5-26e71d6cf0c4.jpg?v=1731906821&width=1066 1066w,
+
+                    
+                  " alt="마켓백 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">마켓백</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩110,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)여덟번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                 //kr.bluebottlecoffee.com/cdn/shop/files/M1_MoheimStonePlate_Hero.png?v=1730095181&width=1066 1066w,
+
+                " alt="스톤 플레이트">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                //kr.bluebottlecoffee.com/cdn/shop/files/Hover_MoheimStonePlate_0fea9d08-2905-46c8-9bfb-eb71239deb10.jpg?v=1730095525&width=1066 1066w,
+
+                  " alt="스톤 플레이트 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">스톤 플레이트</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩28,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)아홉번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                //kr.bluebottlecoffee.com/cdn/shop/files/M1_TeaTowel_Hero.png?v=1727138495&width=1066 1066w,
+
+                " alt="티타월">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                     //kr.bluebottlecoffee.com/cdn/shop/files/Hover_TeaTowel.jpg?v=1727138513&width=1066 1066w,
+
+                  " alt="티타월 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">티타월</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩28,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)열번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="
+                //kr.bluebottlecoffee.com/cdn/shop/files/240703_Gray-Cooler-Bag_1.png?v=1721275587&width=1066 1066w,
+
+                " alt="그레이 코튼 쿨러백">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="
+                //kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_240711-Gray-Cooler-Bag-1.jpg?v=1722297281&width=1066 1066w,
+
+                  " alt="그레이 코튼 쿨러백 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">그레이 코튼 쿨러백</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩23,000원</p>
+                    </div>
+                </li>
+
+
+                <!--라이프 엘아이(그림)열한번째-->
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img src="  
+                    //kr.bluebottlecoffee.com/cdn/shop/files/240703_Shopping-Bag_S.png?v=1721275705&width=1066 1066w,
+                  //kr.bluebottlecoffee.com/cdn/shop/files/240703_Shopping-Bag_S.png?v=1721275705 1600w
+                 
+                " alt="블루보틀 쇼팽백">
+
+                    <!--호버이미지-->
+                    <img class="img-hover" src="     
+                
+                    //kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_240711-Shopping-Bag-1.jpg?v=1722297247&width=1066 1066w,
+
+                  " alt="블루보틀 쇼팽백 호버">
+
+                    <!--라이프 박스엘아이 안 라이프 스타일박스-->
+                    <div class="productli-Box">
+                        라이프 스타일
+
+                        <!--라이프 박스엘아이 안 상품이름-->
+                        <p class="productli-Font">블루보틀 쇼핑백</p>
+                    </div>
+
+                    <!--라이프 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩100원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
