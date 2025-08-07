@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 2000px;
+            margin: 0 auto;
+            /*나중에 제거 혹은 유지*/
+            background-color: rgb(253, 251, 247);
+
+        }
+
+        /*메인태그 메인이미지 글자 위치잡아줌*/
+        .mainimagetag {
+            position: relative;
+        }
+
+        /*메인태그속 글자*/
+        .mainimagetag p {
+            position: absolute;
+            color: white;
+            bottom: 20%;
+            left: 5%;
+            font-weight: 600;
+            font-size: 31px;
+        }
+
+        /*메인태그속 이미지*/
+        .mainimagetag img {
+            width: 100%;
+            height: 635px;
+            display: block;
+            object-fit: cover;
+            /*이미지 끝 안맞음*/
+        }
+
+        /*최상단 정보 바디*/
+        .mainalltag-Body1 {
+            width: 100%;
+        }
+
+        /* <!--최상단 메인메뉴-->*/
+        .mainalltag-Info {
+            width: 1600px;
+            height: 71.5px;
+            padding: 24px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+
+
+        /*최상단 메인메뉴 글씨*/
+        .mainalltag-Info span {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 60px;
+            letter-spacing: 1.68px;
+            text-decoration: none;
+            color: #545454;
+            padding: 0 12px;
+
+        }
+
+        /*-최상단 메인메뉴 바디*/
+        .allmenu-bigbody {
+            box-sizing: border-box;
+            width: 100%;
+            height: 765.875px;
+            padding: 36px;
+
+
+        }
+
+        /*최상단 메인메뉴 모음*/
+        .allmenu-Box-choice {
+            width: 1600px;
+            height: 80%;
+            padding: 60px;
+            margin: 0 auto;
+            position: relative;
+
+        }
+
+        .allmenu-Box-info {
+            font-size: 20px;
+            font-style: inherit;
+            color: #333333;
+            position: absolute;
+            top: 0;
+        }
+
+        /*모두보기 버튼*/
+        .allmenu-Box-choicebtn {
+            font-size: 14px;
+            font-weight: 500;
+            position: absolute;
+            bottom: 40px;
+            left: 40%;
+            width: 294px;
+            height: 50px;
+            border: 1px solid #333333;
+            color: #333333;
+            background-color: transparent;
+            cursor: pointer;
+
+        }
+
+        .allmenu-Box-infoclick {
+            font-size: 16px;
+            color: #333333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /*두번째 바디*/
+        .allmenu-smallbody {
+            width: 100%;
+            height: 765.875px;
+            padding: 36px;
+            box-sizing: border-box;
+
+        }
+
+
+
+        /*유엘(틀)*/
+        .product-mainu1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 16px;
+            padding: 0;
+            list-style: none;
+
+        }
+
+        /*엘아이(그림)*/
+        .product-mainli {
+            flex: 0 0 calc(33.3% - 16px);
+            box-sizing: border-box;
+            position: relative;
+            height: 481.94px;
+            background-color: rgb(249, 246, 240);
+            overflow: hidden;
+
+        }
+
+        /*박스엘아이 안  이름,가격영역*/
+        .product-liBox {
+            position: absolute;
+            width: 100%;
+            height: 150.75px;
+            box-sizing: border-box;
+            bottom: -50px;
+            text-align: center;
+            font-weight: 600;
+            color: gray;
+        }
+
+        /*박스엘아이 안 상품이름*/
+        .product-liFont {
+            height: 100px;
+            font-size: 16px;
+            color: black;
+            font-weight: 450;
+            align-items: center;
+        }
+
+
+        .product-liBox-humanmade {
+            position: absolute;
+            width: 100%;
+            height: 150.75px;
+            box-sizing: border-box;
+            bottom: -50px;
+            text-align: center;
+            font-weight: 600;
+            color: gray;
+        }
+
+        .product-liFont-humanmade {
+            height: 100px;
+            font-size: 16px;
+            color: black;
+            font-weight: 450;
+            align-items: center;
+        }
+
+        /*박스엘아이 안 상품가격*/
+        .product-liPrice {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            background-color: #545454;
+            opacity: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*박스엘아이 안 기본이미지*/
+        .product-mainli .img-basic {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.5s ease;
+        }
+
+        /*휴먼메이드 이미지*/
+        .product-mainli .img-basic-humanmade {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            transition: .5s;
+        }
+
+        .img-basic-humanmade:hover{
+            transform: scale(1.2);
+        }
+
+        /*박스엘아이 안 호버이미지*/
+        .product-mainli .img-hover {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        /*마우스가 올라가면 호버이미지 띄위기*/
+        .product-mainli:hover .img-hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        /*마우스가 올라가면 기본 이미지 흐리기*/
+        .product-mainli:hover .img-basic {
+            opacity: 0;
+        }
+
+        /*마우스가 올라가면 상품설명,이름 흰색으로 변경*/
+        .product-mainli:hover .product-liBox,
+        .product-mainli:hover .product-liFont {
+            color: white;
+        }
+
+        /*마우스가 올라가면 가격표가 보이게하기*/
+        .product-mainli:hover .product-liPrice {
+            opacity: 1;
+        }
+
+        /*신제품 우상단에 붙이는 밴딩*/
+        .productBadge-life {
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 1.44px;
+            background: #545454;
+            position: absolute;
+            transform: rotate(45deg);
+            width: 170px;
+            right: -50px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--메인이미지-->
+    <div class="mainimagetag">
+        <img src="https://kr.bluebottlecoffee.com/cdn/shop/files/PLP_PC_4f3f2804-5ed4-4ddb-8ef2-ab441bf6c598.jpg?v=1744606224"
+            alt="메인이미지">
+        <p>모든 커피</p>
+    </div>
+
+    <!--최상단 메인메뉴 바디-->
+    <div class="mainalltag-Body1">
+
+        <!--최상단 메인메뉴 모음-->
+        <div class="mainalltag-Info">
+
+            <!--최상단 메인메뉴 글씨-->
+            <span> <a class="allmenu-Box-infoclick" href="./블루보틀커피_블렌드.html" target="_blank">블렌드</a></span>
+
+            <span> <a class="allmenu-Box-infoclick" href="./블루보틀커피_싱글오리진.html" target="_blank">싱글 오리진</a> </span>
+
+            <span> <a class="allmenu-Box-infoclick" href="./블루보틀커피_휴먼메이드.html" target="_blank">휴먼 메이드</a> </span>
+
+            <span> <a class="allmenu-Box-infoclick" href="./블루보틀커피_세트.html" target="_blank">세트</a> </span>
+
+            <span> <a class="allmenu-Box-infoclick" href="./블루보틀커피_인스턴트.html" target="_blank">인스턴트</a> </span>
+
+            <span> <a class="allmenu-Box-infoclick" href="./블루보틀커피_콜드브루.html" target="_blank">콜드브루 커피</a> </span>
+        </div>
+    </div>
+
+    <!--섹션 1  큰바디-->
+    <div class="allmenu-bigbody">
+        <!--내부 콘텐츠 들어갈 박스-->
+        <div class="allmenu-Box-choice">
+
+
+            <ul class="product-mainu1">
+
+                <!--------------------1번이미지---------------------------------->
+
+                <li class="product-mainli">
+
+                    <!--기본이미지-->
+                    <img class="img-basic"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/D1_bella_1600.png?crop=center&height=1024&v=1748392544&width=1024"
+                        alt="벨라 도노반">
+
+                    <!--호버이미지-->
+                    <img class="img-hover"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/Bella-Donovan-M3-Design-Detail1-Desktop_c8fafc3b-e405-495e-b544-eecccf4c69b6.jpg?crop=center&height=1024&v=1748392544&width=1024"
+                        alt="블렌드">
+
+                    <!--모음집 박스엘아이 안 태그-->
+                    <div class="product-liBox">
+                        <span>블렌드</span>
+
+                        <!--모음집 박스엘아이 안 이름-->
+                        <p class="product-liFont">벨라 도노반</p>
+                    </div>
+
+                    <!--모음집 박스엘아이 안 가격-->
+                    <div class="product-liPrice">
+                        <p>카트에 추가 | ₩22,500원</p>
+                    </div>
+
+
+                </li>
+
+                <!--------------------2번이미지---------------------------------->
+
+                <li class="product-mainli">
+
+                    <!--기본이미지-->
+                    <img class="img-basic"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/HVE_1600.png?crop=center&height=1024&v=1748393216&width=1024"
+                        alt="헤이즈 벨리 에스프레소">
+
+                    <!--호버이미지-->
+                    <img class="img-hover"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/Hayes-Valley-Espresso-M3-Design-Detail1-Desktop.jpg?crop=center&height=1024&v=1748393216&width=1024"
+                        alt="블렌드">
+
+                    <!--모음집 박스엘아이 안 태그-->
+                    <div class="product-liBox">
+                        <span>블렌드</span>
+
+                        <!--모음집 박스엘아이 안 이름-->
+                        <p class="product-liFont">헤이즈 벨리 에스프레소</p>
+                    </div>
+
+                    <!--모음집 박스엘아이 안 가격-->
+                    <div class="product-liPrice">
+                        <p>카트에 추가 | ₩22,500원</p>
+                    </div>
+
+
+                </li>
+
+
+                <!--------------------3번이미지---------------------------------->
+
+                <li class="product-mainli">
+
+                    <!--기본이미지-->
+                    <img class="img-basic"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/D1_giant_1600.png?crop=center&height=1024&v=1748393576&width=1024"
+                        alt="자이언트 스텝스">
+
+                    <!--호버이미지-->
+                    <img class="img-hover"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/Giant-Steps-Hover-1600x1600.jpg?crop=center&height=1024&v=1748393576&width=1024"
+                        alt="블렌드">
+
+                    <!--모음집 박스엘아이 안 태그-->
+                    <div class="product-liBox">
+                        <span>블렌드</span>
+
+                        <!--모음집 박스엘아이 안 이름-->
+                        <p class="product-liFont">자이언트 스텝스</p>
+                    </div>
+
+                    <!--모음집 박스엘아이 안 가격-->
+                    <div class="product-liPrice">
+                        <p>카트에 추가 | ₩22,500원</p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <!--모두보기 버튼  html에서 js스크립트 제어코드-->
+            <button class="allmenu-Box-choicebtn" onclick="window.location.href='./블루보틀커피_블렌드.htlm'">
+                모두보기 </button>
+
+            <div class=" allmenu-Box-info">
+                <h2>블렌드</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--섹션 2  큰바디-->
+    <div class="allmenu-bigbody">
+        <!--내부 콘텐츠 들어갈 박스-->
+        <div class="allmenu-Box-choice">
+
+            <ul class="product-mainu1">
+
+                <!--------------------1번이미지---------------------------------->
+                <li class="product-mainli">
+
+                    <!--기본이미지-->
+                    <img class="img-basic"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_f986defc-5fcd-4fc0-b464-8b0853f87c3c.png?crop=center&height=1024&v=1750220884&width=1024"
+                        alt="볼리비아 카라나비 솔 데 라 마냐나">
+
+                    <!--호버이미지-->
+                    <img class="img-hover"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/D2_MO_1000x1250_46ad38a2-a8d3-49a7-bc87-0ba2b35a8c46.jpg?crop=center&height=1024&v=1750221443&width=1024"
+                        alt="컵과머그">
+
+                    <!--모음집 박스엘아이 안 태그-->
+                    <div class="product-liBox">
+                        <span>싱글 오리진</span>
+
+                        <!--모음집 박스엘아이 안 이름-->
+                        <p class="product-liFont">볼리비아 카라나비 솔 데 라 마냐나</p>
+                    </div>
+
+                    <!--모음집 박스엘아이 안 가격-->
+                    <div class="product-liPrice">
+                        <p>카트에 추가 | ₩29,500원</p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="allmenu-Box-info">
+                <h2>싱글 오리진</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <!--섹션 3  큰바디-->
+    <div class="allmenu-bigbody">
+        <!--내부 콘텐츠 들어갈 박스-->
+        <div class="allmenu-Box-choice">
+
+            <ul class="product-mainu1">
+
+                <!--------------------1번이미지---------------------------------->
+                <li class="product-mainli">
+
+                    <!--기본이미지-->
+                    <img class="img-basic-humanmade"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/01_001_Past_Blend_1600x1600_1628bc3d-92dc-412c-bc72-5c78cc89e3d6.png?crop=center&height=1024&v=1727138155&width=1024"
+                        alt="휴먼 메이드 패스트 블렌드">
+
+
+                    <!--모음집 박스엘아이 안 태그-->
+                    <div class="product-liBox-humanmade">
+                        <span>휴먼 메이드</span>
+
+                        <!--모음집 박스엘아이 안 이름-->
+                        <p class="product-liFont-humanmade">휴먼 메이드 패스트 블렌드</p>
+                    </div>
+
+                    <!--모음집 박스엘아이 안 가격-->
+                    <div class="product-liPrice">
+                        <p>카트에 추가 | ₩30,000원</p>
+                    </div>
+
+                </li>
+
+                <!--------------------2번이미지---------------------------------->
+                <li class="product-mainli">
+
+                    <!--기본이미지-->
+                    <img class="img-basic-humanmade"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/01_001_Future_Blend_1600x1600_9f8aa58e-f9df-4899-9ae4-85da2113b1ef.png?crop=center&height=1024&v=1727137702&width=1024"
+                        alt="휴먼 메이드 퓨처 블렌드">
+
+                    <!--모음집 박스엘아이 안 태그-->
+                    <div class="product-liBox-humanmade">
+                        <span>휴먼메이드</span>
+
+                        <!--모음집 박스엘아이 안 이름-->
+                        <p class="product-liFont-humanmade">휴먼 메이드 퓨처 블렌드</p>
+                    </div>
+
+                    <!--모음집 박스엘아이 안 가격-->
+                    <div class="product-liPrice">
+                        <p>카트에 추가 | ₩30,000원</p>
+                    </div>
+                </li>
+            </ul>
+
+           
+            <div class="allmenu-Box-info">
+                <h2>휴먼 메이드</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

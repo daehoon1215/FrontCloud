@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 2000px;
+            margin: 0 auto;
+            /*나중에 제거 혹은 유지*/
+            background-color: rgb(253, 251, 247);
+        }
+
+        /*메인태그 메인이미지 글자 위치잡아줌*/
+        .mainimagetag {
+            position: relative;
+
+
+        }
+
+        /*메인태그속 글자*/
+        .mainimagetag p {
+            position: absolute;
+            color: white;
+            bottom: 20%;
+            left: 5%;
+            font-weight: 600;
+            font-size: 31px;
+        }
+
+        /*메인태그속 이미지*/
+        .mainimagetag img {
+            width: 100%;
+            height: 635px;
+            display: block;
+            object-fit: cover;
+            /*이미지 끝 안맞음*/
+
+        }
+
+
+
+        /*상품 바디*/
+        .productBody-life {
+            height: 2562.750px;
+
+
+        }
+
+
+        /* 리스트(기본몸)*/
+        .productBox-life {
+            width: 1480px;
+            height: 2562.750px;
+            margin: 0 auto;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+
+        /*유엘(틀)*/
+        .productUl-life {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+
+            margin-top: 16px;
+            padding: 0;
+            list-style: none;
+
+
+        }
+
+
+        /*엘아이(그림)*/
+        .productli-life {
+            flex: 0 0 calc(33.3% - 16px);
+            box-sizing: border-box;
+            position: relative;
+            height: 481.94px;
+            background-color: rgb(249, 246, 240);
+            overflow: hidden;
+
+        }
+
+
+        /*박스엘아이 안  이름,가격영역*/
+        .productli-Box {
+            position: absolute;
+            width: 100%;
+            height: 150.750px;
+            box-sizing: border-box;
+            bottom: -50px;
+            text-align: center;
+            font-weight: 600;
+            color: gray;
+
+
+        }
+
+
+        /*박스엘아이 안 상품이름*/
+        .productli-Font {
+            height: 100px;
+            font-size: 16px;
+            color: black;
+            font-weight: 450;
+
+        }
+
+
+        /*박스엘아이 안 상품가격*/
+        .productli-Price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            background-color: #545454;
+            opacity: 0;
+
+        }
+
+        /*박스엘아이 안 기본이미지*/
+        .productli-life .img-basic {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            /*다시 돌아오는 시간을 1초*/
+            transition: 1s;
+
+        }
+
+        /*박스엘아이 안 호버이미지*/
+        .productli-life .img-hover {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+        }
+
+        /*마우스가 올라가면 호버이미지 띄위기*/
+        .productli-life:hover .img-hover {
+            opacity: 1;
+            transform: scale(1.2);
+
+
+        }
+
+        /*마우스가 올라가면 기본 이미지 흐리기*/
+        .productli-life:hover .img-basic {
+            opacity: 0;
+
+        }
+
+        /*기본이미지 마우스 올라가면 0.5초만에 확대*/
+        .productli-life:hover .img-basic {
+            transform: scale(1.1);
+            transition: .5s;
+
+
+        }
+
+        /*마우스가 올라가면 가격표가 보이게하기*/
+        .productli-life:hover .productli-Price {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--메인이미지-->
+    <div class="mainimagetag">
+        <img class="img-basic"
+            src="https://kr.bluebottlecoffee.com/cdn/shop/collections/Brazil-Chapada-Diamantina-Chacara-Vista-Alegre-M4-Lifestyle-Desktop.jpg?v=1720482915"
+            alt="메인이미지">
+        <p>싱글오리진</p>
+
+    </div>
+
+    <!--메인바디-->
+    <div class="productBody-life">
+
+
+        <div class="productBox-life">
+
+
+            <ul class="productUl-life ">
+
+                <!------------리스트 1------------------------------------------------------------------>
+
+                <li class="productli-life">
+
+                    <!--기본이미지-->
+                    <img class="img-basic"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_f986defc-5fcd-4fc0-b464-8b0853f87c3c.png?crop=center&height=1024&v=1750220884&width=1024"
+                        alt="볼리비아 카라나비 솔 데 라 마냐나">
+
+
+                    <!--호버이미지-->
+                    <img class="img-hover"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/D2_MO_1000x1250_46ad38a2-a8d3-49a7-bc87-0ba2b35a8c46.jpg?crop=center&height=1024&v=1750221443&width=1024"
+                        alt="싱글오리진">
+
+                    <!--싱글오리진 박스엘아이 안 태그-->
+                    <div class="productli-Box">
+                        <span>싱글오리진</span>
+
+                        <!--싱글오리진 박스엘아이 안 이름-->
+                        <p class="productli-Font">볼리비아 카라나비 솔 데 라 마냐나</p>
+                    </div>
+
+                    <!--싱글오리진 박스엘아이 안 가격-->
+                    <div class="productli-Price">
+                        <p>카트에 추가 | ₩29,500원</p>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

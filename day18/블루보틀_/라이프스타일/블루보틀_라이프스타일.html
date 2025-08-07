@@ -90,7 +90,7 @@
         .productli-Box {
             position: absolute;
             width: 100%;
-            height: 150.750;
+            height: 150.750px;
             box-sizing: border-box;
             bottom: -50px;
             text-align: center;
@@ -104,48 +104,48 @@
         /*박스엘아이 안 상품이름*/
         .productli-Font {
             height: 100px;
-            font-size: 18px;
+            font-size: 16px;
             color: black;
             font-weight: 450;
-            align-items: center;
 
         }
 
 
         /*박스엘아이 안 상품가격*/
         .productli-Price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 40px;
-            text-align: center;
+            height: 30px;
             color: white;
             font-weight: bold;
             font-size: 20px;
-            line-height: 0;
+            line-height: 30px;
             background-color: #545454;
             opacity: 0;
 
         }
 
-
-
-
-        /*박스엘아이 안 상품이미지*/
-        .productli-life img {
+        /*박스엘아이 안 기본이미지*/
+        .productli-life .img-basic {
             width: 100%;
-            height: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.5s ease;
+        }
+
+        /*박스엘아이 안 호버이미지*/
+        .productli-life .img-hover {
+            width: 100%;
+            height: auto;
             object-fit: cover;
             display: block;
             position: absolute;
-            bottom: 50px;
-            transition: 1s;
-
-        }
-
-
-        /*박스엘아이 안 호버상품이미지*/
-        .productli-life .img-hover {
+            top: 0;
             opacity: 0;
         }
 
@@ -154,13 +154,15 @@
             opacity: 1;
             transform: scale(1.2);
 
+
         }
 
         /*마우스가 올라가면 기본 이미지 흐리기*/
-        .productli-life:hover img {
+        .productli-life:hover .img-basic {
             opacity: 0;
 
         }
+
 
         /*마우스가 올라가면 상품설명,이름 흰색으로 변경*/
         .productli-life:hover .productli-Box,
@@ -173,23 +175,20 @@
             opacity: 1;
         }
 
-
-
-        /*박스엘아이 안 상품이미지 위 '신제품'태그*/
+        /*신제품 우상단에 붙이는 밴딩*/
         .productBadge-life {
-            color: white;
+            color: #fff;
             text-align: center;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 500;
-            line-height: 15px;
+            line-height: 26px;
+            letter-spacing: 1.44px;
             background: #545454;
-            transform: rotate(45deg);
             position: absolute;
-            right: -40px;
-            top: 30px;
-            width: 180px;
-            height: 40px;
-
+            transform: rotate(45deg);
+            width: 170px;
+            right: -50px;
+            top: 10px;
         }
     </style>
 </head>
@@ -197,8 +196,10 @@
 <body>
     <!--메인이미지-->
     <div class="mainimagetag">
-        <img src="//kr.bluebottlecoffee.com/cdn/shop/collections/BBC_PLP_HumanMade_Desktop.jpg?v=1730765835 2000w
-" alt="메인이미지">
+
+        <img src="//kr.bluebottlecoffee.com/cdn/shop/collections/BBC_PLP_HumanMade_Desktop.jpg?v=1730765835"
+            alt="메인이미지">
+
         <p>라이프스타일</p>
     </div>
 
@@ -212,21 +213,18 @@
             <ul class="productUl-life ">
 
 
-
-
                 <!--라이프 엘아이(그림)첫번째-->
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                  //kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1600x1600_16510637-08b6-4cb1-9a4d-2da842234e69.png?v=1744701097
-                " alt="화이트모카 강냉이">
+                    <img class="img-basic"
+                        src="https://kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1600x1600_16510637-08b6-4cb1-9a4d-2da842234e69.png?crop=center&height=1536&v=1744701097&width=1536"
+                        alt="화이트 모카 강냉이">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                    //kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1000x1250_a7aba477-0726-431f-8890-6a534b309c7a.jpg?v=1744701097&width=1066 1066w,
-                    //kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1000x1250_a7aba477-0726-431f-8890-6a534b309c7a.jpg?v=1744701097 1000w
-                  " alt="화이트모카 강냉이 호버">
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/White-Mocha-Korean-Popcorn_1000x1250_a7aba477-0726-431f-8890-6a534b309c7a.jpg?v=1744701097"
+                        alt="화이트 모카 강냉이 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -248,20 +246,15 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_001.png?v=1728365701"
+                        alt="에코 백 미니 -커피 리프-">
 
-                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_001.png?v=1728365701&width=1066 1066w,
-                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_001.png?v=1728365701 1600w
-                
-                " alt="엠브로이더리 에코 백 미니 -커피 리프-">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src=" 
-
-                    //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_002.jpg?v=1728365709&width=1066 1066w,
-                    //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_002.jpg?v=1728365709 1600w
-                
-                  " alt="엠브로이더리 에코 백 미니 -커피 리프 호버-">
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/1600x1600__01_002.jpg?v=1728365709"
+                        alt="에코 백 미니 -커피 리프- 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -282,20 +275,14 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                 
-                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_EmbroideredTote_BBC.png?v=1747708847&width=1066 1066w,
-                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_EmbroideredTote_BBC.png?v=1747708847 1600w
-                
-                " alt="엠브로이더리 에코 백-블루보틀-">
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/D1_Main_1600x1600_EmbroideredTote_BBC.png?v=1747708847"
+                        alt="에코 백 -블루보틀-">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                   
-                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_Sub-Hover_EmbroideredTote_BBC.jpg?v=1747708847&width=1066 1066w,
-                    //kr.bluebottlecoffee.com/cdn/shop/files/D1_Sub-Hover_EmbroideredTote_BBC.jpg?v=1747708847 1000w
-                  
-                  " alt="엠브로이더리 에코 백-블루보틀 호버-">
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/D1_Sub-Hover_EmbroideredTote_BBC.jpg?v=1747708847"
+                        alt="에코 백 -블루보틀- 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -322,18 +309,16 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/241213_BBCJ0172_pre-edited_1600x1600_801fcd32-d4fd-4a57-8b7f-6cece3f0edab.png?v=1742264718"
+                        alt="키요스미 토트백 10주년 에디션">
 
-                     //kr.bluebottlecoffee.com/cdn/shop/files/241213_BBCJ0172_pre-edited_1600x1600_801fcd32-d4fd-4a57-8b7f-6cece3f0edab.png?v=1742264718&width=1066 1066w,
-
-                " alt="키요스미 토트백 10주년 에디션">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/241213_BBCJ0047_pre_D2_MO.jpg?v=1742264728"
+                        alt="키요스미 토트백 10주년 에디션 호버">
 
-                  //kr.bluebottlecoffee.com/cdn/shop/files/241213_BBCJ0047_pre_D2_MO.jpg?v=1742264728&width=1066 1066w,
-
-                  " alt="키요스미 토트백 10주년 에디션 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -354,20 +339,15 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                 
-                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600.png?v=1741914796&width=1066 1066w,
-                  //kr.bluebottlecoffee.com/cdn/shop/files/1600x1600.png?v=1741914796 1600w
-                
-                " alt="커피트럭 키 체인">
+                    <img class="img-basic" src="//kr.bluebottlecoffee.com/cdn/shop/files/1600x1600.png?v=1741914796"
+                        alt="커피트럭 키 체인">
+
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                    
-                    //kr.bluebottlecoffee.com/cdn/shop/files/1000x1250_fb8fe61e-2465-4ce0-b3b0-19e62ae0b9a4.jpg?v=1741914798&width=1066 1066w,
-                    //kr.bluebottlecoffee.com/cdn/shop/files/1000x1250_fb8fe61e-2465-4ce0-b3b0-19e62ae0b9a4.jpg?v=1741914798 1000w
-                  
-                  " alt="커피트럭 키 체인 호버">
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/1000x1250_fb8fe61e-2465-4ce0-b3b0-19e62ae0b9a4.jpg?v=1741914798"
+                        alt="커피트럭 키 체인 호버">
+
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -388,18 +368,15 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                 
-                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_1600x1600_20250116.png?v=1737338968&width=1066 1066w,
-                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_1600x1600_20250116.png?v=1737338968 1600w
-                
-                " alt="런치백">
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/D1_1600x1600_20250116.png?v=1737338968" alt="런치백">
+
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                  //kr.bluebottlecoffee.com/cdn/shop/files/D1_1000x1250_20250116-2.jpg?v=1737338969&width=1066 1066w,
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/D1_1000x1250_20250116-2.jpg?v=1737338969"
+                        alt="런치백 호버">
 
-                  " alt="런치백 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -420,20 +397,15 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                  
-                  //kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_01_1600x1600_4c38f0a0-4e7d-4b89-88cd-51854d785762.png?v=1731906814&width=1066 1066w,
-                  //kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_01_1600x1600_4c38f0a0-4e7d-4b89-88cd-51854d785762.png?v=1731906814 1600w
-                
-                " alt="마켓백">
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_01_1600x1600_4c38f0a0-4e7d-4b89-88cd-51854d785762.png?v=1731906814"
+                        alt="마켓백">
+
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-
-                  //kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_02_1600x1600_999945ce-5bfa-4aae-9da5-26e71d6cf0c4.jpg?v=1731906821&width=1066 1066w,
-
-                    
-                  " alt="마켓백 호버">
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/MarketBag_02_1600x1600_999945ce-5bfa-4aae-9da5-26e71d6cf0c4.jpg?v=1731906821"
+                        alt="마켓백 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -454,16 +426,16 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                 //kr.bluebottlecoffee.com/cdn/shop/files/M1_MoheimStonePlate_Hero.png?v=1730095181&width=1066 1066w,
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/M1_MoheimStonePlate_Hero.png?v=1730095181"
+                        alt="스톤 플레이트">
 
-                " alt="스톤 플레이트">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                //kr.bluebottlecoffee.com/cdn/shop/files/Hover_MoheimStonePlate_0fea9d08-2905-46c8-9bfb-eb71239deb10.jpg?v=1730095525&width=1066 1066w,
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/Hover_MoheimStonePlate_0fea9d08-2905-46c8-9bfb-eb71239deb10.jpg?v=1730095525"
+                        alt="스톤 플레이트 호버">
 
-                  " alt="스톤 플레이트 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -484,16 +456,14 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                //kr.bluebottlecoffee.com/cdn/shop/files/M1_TeaTowel_Hero.png?v=1727138495&width=1066 1066w,
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/M1_TeaTowel_Hero.png?v=1727138495" alt="티타월">
 
-                " alt="티타월">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                     //kr.bluebottlecoffee.com/cdn/shop/files/Hover_TeaTowel.jpg?v=1727138513&width=1066 1066w,
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/Hover_TeaTowel.jpg?v=1727138513" alt="티타월 호버">
 
-                  " alt="티타월 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -514,16 +484,16 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="
-                //kr.bluebottlecoffee.com/cdn/shop/files/240703_Gray-Cooler-Bag_1.png?v=1721275587&width=1066 1066w,
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/240703_Gray-Cooler-Bag_1.png?v=1721275587"
+                        alt="그레이 코튼 쿨러백">
 
-                " alt="그레이 코튼 쿨러백">
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="
-                //kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_240711-Gray-Cooler-Bag-1.jpg?v=1722297281&width=1066 1066w,
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_240711-Gray-Cooler-Bag-1.jpg?v=1722297281"
+                        alt="그레이 코튼 쿨러백 호버">
 
-                  " alt="그레이 코튼 쿨러백 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
@@ -544,22 +514,20 @@
                 <li class="productli-life">
 
                     <!--기본이미지-->
-                    <img src="  
-                    //kr.bluebottlecoffee.com/cdn/shop/files/240703_Shopping-Bag_S.png?v=1721275705&width=1066 1066w,
-                  //kr.bluebottlecoffee.com/cdn/shop/files/240703_Shopping-Bag_S.png?v=1721275705 1600w
-                 
-                " alt="블루보틀 쇼팽백">
+                    <img class="img-basic"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/240703_Shopping-Bag_S.png?v=1721275705"
+                        alt="블루보틀 쇼핑백">
+
 
                     <!--호버이미지-->
-                    <img class="img-hover" src="     
-                
-                    //kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_240711-Shopping-Bag-1.jpg?v=1722297247&width=1066 1066w,
+                    <img class="img-hover"
+                        src="//kr.bluebottlecoffee.com/cdn/shop/files/20240729_1000x1250px_240711-Shopping-Bag-1.jpg?v=1722297247"
+                        alt="블루보틀 쇼핑백 호버">
 
-                  " alt="블루보틀 쇼팽백 호버">
 
                     <!--라이프 박스엘아이 안 라이프 스타일박스-->
                     <div class="productli-Box">
-                        라이프 스타일
+                        <span>라이프 스타일</span>
 
                         <!--라이프 박스엘아이 안 상품이름-->
                         <p class="productli-Font">블루보틀 쇼핑백</p>
